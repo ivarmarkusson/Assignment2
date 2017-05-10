@@ -1,0 +1,112 @@
+# depslib dependency file v1.0
+1494347479 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\main.cpp
+	<iostream>
+	"include/Board.h"
+	<string>
+	<algorithm>
+
+1494349379 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\src\board.cpp
+	"Board.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1494347146 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\include\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+
+1494344642 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\include\piece.h
+	<string>
+
+1494343060 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\src\piece.cpp
+	"Piece.h"
+
+1494343693 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\src\player.cpp
+	"Player.h"
+
+1494343758 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment02\include\player.h
+
+1494424061 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\main.cpp
+	<iostream>
+	"Board.h"
+	<string>
+	<algorithm>
+	"player.h"
+	"BT.h"
+
+1494414959 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\include\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494423443 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\include\piece.h
+
+1494423841 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\src\board.cpp
+	"Board.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1494351292 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\src\player.cpp
+	"Player.h"
+
+1494417584 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\include\player.h
+	<vector>
+	"Piece.h"
+
+1494421976 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\src\game.cpp
+	"Game.h"
+	<iostream>
+
+1494424070 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\include\game.h
+	"Board.h"
+
+1494421931 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\src\bt.cpp
+	"BT.h"
+
+1494422074 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\assignment 2\assignment02\include\bt.h
+	"Game.h"
+
+1494434582 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\main.cpp
+	<iostream>
+	"Board.h"
+	<string>
+	<algorithm>
+	"player.h"
+	"BT.h"
+
+1494435999 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\include\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494434336 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\include\piece.h
+
+1494426910 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\include\player.h
+	<vector>
+	"Piece.h"
+
+1494434375 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\include\bt.h
+	"Game.h"
+
+1494435999 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\include\game.h
+	"Board.h"
+
+1494433992 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\src\board.cpp
+	"Board.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1494434647 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\src\bt.cpp
+	"BT.h"
+	<iostream>
+
+1494436061 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment02\src\game.cpp
+	"Game.h"
+	<iostream>
+	"Piece.h"
+
