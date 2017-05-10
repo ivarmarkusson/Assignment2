@@ -11,6 +11,11 @@ BT::~BT()
     //dtor
 }
 
+void BT::display()
+{
+    std::cout << *board_ << std::endl;
+}
+
 void BT::initialize_board()
 {
     Position pos1, pos2;
@@ -28,9 +33,4 @@ void BT::initialize_board()
             board_->place_piece(p2);
         }
     }
-}
-
-void BT::display()
-{
-    std::cout << *board_ << std::endl;
 }

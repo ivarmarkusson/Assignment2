@@ -1,6 +1,5 @@
 #include "Game.h"
 #include <iostream>
-#include "Piece.h"
 
 Game::Game(int rows, int cols)
 {
@@ -10,13 +9,6 @@ Game::Game(int rows, int cols)
 Game::~Game()
 {
     delete board_;
-}
-
-void Game::move(Piece from, Piece to){
-    Position posFrom = from.get_position();
-    Position posTo = to.get_position();
-
-
 }
 
 void Game::display()

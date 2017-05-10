@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1494436772 source:c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\main.cpp
+	<iostream>
+	"Board.h"
+	<string>
+	<algorithm>
+	"player.h"
+	"BT.h"
+	"Piece.h"
+
+1494436887 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494436848 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\piece.h
+
+1494436869 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\player.h
+	<vector>
+	"Piece.h"
+
+1494436927 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\bt.h
+	"Game.h"
+
+1494436804 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\game.h
+	"Board.h"
+

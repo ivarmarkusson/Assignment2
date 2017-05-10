@@ -26,6 +26,11 @@ class Piece
         char get_symbol() {return symbol_;};
         int get_owner() {return owner_;};
         Position get_position() {return position_;};
+        void set_position(int x, int y)
+        {
+            position_.x_ = x;
+            position_.y_ = y;
+        };
     protected:
     private:
         char symbol_;

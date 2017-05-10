@@ -6,7 +6,7 @@
 class Player
 {
     public:
-        Player(int player, char sym) : player_(player), symbol_(sym) {};
+        Player(int player, char sym, int num_pieces) : player_(player), symbol_(sym) {};
         virtual ~Player() {};
         char get_symbol() {return symbol_;};
         int get_player() {return player_;};
