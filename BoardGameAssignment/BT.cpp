@@ -1,19 +1,11 @@
 #include "BT.h"
 #include <iostream>
 
-BT::BT(int rows, int cols) : Game(rows, cols)
-{
-
-}
+BT::BT(int rows, int cols) : Game(rows, cols){}
 
 BT::~BT()
 {
     //dtor
-}
-
-void BT::display()
-{
-    std::cout << *board_ << std::endl;
 }
 
 void BT::initialize_board()

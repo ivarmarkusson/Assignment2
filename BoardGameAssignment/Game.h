@@ -8,8 +8,9 @@ class Game
     public:
         Game(int rows, int cols = 0);
         virtual ~Game();
-        virtual void display();
+        void display() const;
         virtual void initialize_board() = 0;
+
     protected:
         Board *board_;
         int turn_;

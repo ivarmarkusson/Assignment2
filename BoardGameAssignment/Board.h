@@ -15,6 +15,7 @@ class Board
         void get_int_from_input(int& val1, int& val2, std::string input);
         void place_piece(Piece piece);
         friend std::ostream& operator<<(std::ostream& os, const Board& board);
+        void display_board();
         int get_rows() {return rows_;};
         int get_columns() {return columns_;};
     protected:

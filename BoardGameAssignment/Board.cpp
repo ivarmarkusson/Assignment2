@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 
+
 Board::Board(int row, int col) : rows_(row), columns_(col)
 {
     if(columns_ == 0)
@@ -52,18 +53,9 @@ void Board::move_from_to(Piece from, Piece to)
 
 void Board::get_int_from_input(int& val1, int& val2, std::string input)
 {
-    if (input.size() != 2)
-    {
-        std::cerr << "Terminal error in input" << std::endl;
-        exit(1);
-    }
-    else
-    {
-        val1 = input[0] - 97;
-        val2 = abs(input[1] - 48 - rows_);
-    }
+    val1 = input[0] - 97;
+    val2 = abs(input[1] - 48 - rows_);
 }
-
 
 void Board::place_piece(Piece piece)
 {
@@ -71,22 +63,27 @@ void Board::place_piece(Piece piece)
     board_[pos.x_][pos.y_] = piece;
 }
 
-std::ostream& operator<<(std::ostream& os, const Board& board)
+/**
+ * Displays the board to the console
+ * ONLY use if you want to display on the console
+ */
+
+void Board::display_board()
 {
     std::string alpha ("abcdefghi");
-    for (int i = 0; i < board.rows_; i++)
+    for (int i = 0; i < rows_; i++)
     {
-        os << board.rows_- i;
-        for (int j = 0; j < board.columns_; j++)
+        std::cout << rows_- i;
+        for (int j = 0; j < columns_; j++)
         {
-            os << board.board_[j][i].get_symbol();
+            std::cout << board_[j][i].get_symbol();
         }
-        os << std::endl;
+        std::cout << std::endl;
     }
-    os << " ";
-    for (int i = 0; i < board.columns_; i++)
+    std::cout << " ";
+    for (int i = 0; i < columns_; i++)
     {
-        os << alpha[i];
+        std::cout << alpha[i];
     }
-    return os;
+    std::cout << std::endl;
 }

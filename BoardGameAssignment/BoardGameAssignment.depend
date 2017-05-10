@@ -26,3 +26,62 @@
 1494436804 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\game.h
 	"Board.h"
 
+1494438048 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\main.cpp
+	<iostream>
+	"Board.h"
+	<string>
+	<algorithm>
+	"player.h"
+	"BT.h"
+	"Piece.h"
+
+1494437854 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\piece.h
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\player.h
+	<vector>
+	"Piece.h"
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\bt.h
+	"Game.h"
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\game.h
+	"Board.h"
+
+1494437854 c:\users\gylfi\desktop\assignment2\boardgameassignment\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\piece.h
+
+1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\player.h
+	<vector>
+	"Piece.h"
+
+1494439602 c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.h
+	"Game.h"
+
+1494439575 c:\users\gylfi\desktop\assignment2\boardgameassignment\game.h
+	"Board.h"
+
+1494438986 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.cpp
+	"BT.h"
+	<iostream>
+
+1494439583 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
+	"Game.h"
+	<iostream>
+
+1494439304 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\board.cpp
+	"Board.h"
+	<iostream>
+	<string>
+	<cstdlib>
+

@@ -11,7 +11,7 @@ Game::~Game()
     delete board_;
 }
 
-void Game::display()
+void Game::display() const
 {
-    std::cout << *board_ << std::endl;
+    board_->display_board();
 }

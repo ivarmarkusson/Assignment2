@@ -15,7 +15,6 @@ int main()
 
     game.initialize_board();
     game.display();
-
 /*
     Board board(8);
     cout << "Empty board" << endl;
