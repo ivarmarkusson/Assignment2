@@ -10,27 +10,85 @@
 
 using namespace std;
 
+void list_games();
+
 int main()
 {
-    BT game(8);
-    game.display();
-    game.move("a8","a9");
-    game.display();
-/*
-    Board board(8);
-    cout << "Empty board" << endl;
-    cout << board << endl << endl;
+    Game *game;
+    string input;
+    while(input != "quit")
+    {
+        cin >> input;
+        if(input == "list")
+        {
+            list_games();
+        }
+        else if (input == "game")
+        {
+            int choice;
+            cin >> choice;
+            switch(choice)
+            {
+                case(1):
+                {
+                    game = new BT(8);
+                }
+                case(2):
+                {
+                    game = new FaH;
+                }
+                case(3):
+                {
+                    game = new MBT(8);
+                }
+            }
+        }
+        else if(input == "start")
+        {
 
-    Position pos;
-    pos.x_ = 0;
-    pos.y_ = 0;
-    Piece p(0,'P', pos);
+        }
+        else if(input == "legal")
+        {
 
-    board.place_Piece(p);
-    cout << board << endl;
+        }
+        else if (input == "move")
+        {
+            string from_square,to_square;
+            cin >> from_square;
+            cin >> to_square;
+            game->move(from_square, to_square);
+        }
+        else if(input == "retract")
+        {
 
-    board.move_from_to("a8", "a7");
-    cout << board << endl;
-*/
+        }
+        else if(input == "display")
+        {
+            game->display();
+        }
+        else if (input == "evaluate")
+        {
+
+        }
+        else if(input == "go")
+        {
+
+        }
+        else if(input == "level")
+        {
+
+        }
+        else if (input == "debug")
+        {
+
+        }
+    }
     return 0;
+}
+
+void list_games()
+{
+    cout << "1. Breakthrough" << endl;
+    cout << "2. Fox and Hounds" << endl;
+    cout << "3. Mega-Breaktrough" << endl;
 }
