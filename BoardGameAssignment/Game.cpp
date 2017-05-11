@@ -71,6 +71,13 @@ void Game::display() const
 
 void Game::retract()
 {
+    timeline_.pop_back();
+    std::cout << "Retract board" << std::endl;
+    for (int i = 0; i < timeline_.size();i++)
+    {
+        timeline_[i]->display_board();
+    }
+    std::cout << "Retract board end" << std::endl;
     board_ = timeline_[timeline_.size()-1];
 }
 
