@@ -51,7 +51,7 @@
 1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\game.h
 	"Board.h"
 
-1494520235 c:\users\gylfi\desktop\assignment2\boardgameassignment\board.h
+1494524077 c:\users\gylfi\desktop\assignment2\boardgameassignment\board.h
 	"Piece.h"
 	<ostream>
 	<string>
@@ -75,13 +75,13 @@
 	<iostream>
 	<vector>
 
-1494519699 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
+1494524727 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
 	"Game.h"
 	<iostream>
 	<string>
 	<stdlib.h>
 
-1494520341 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\board.cpp
+1494524888 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\board.cpp
 	"Board.h"
 	<iostream>
 	<string>
@@ -158,4 +158,7 @@
 1494511217 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
 	"FaH.h"
 	<vector>
+
+1494522043 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\piece.cpp
+	"Piece.h"
 

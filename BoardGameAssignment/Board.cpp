@@ -105,3 +105,26 @@ Piece Board::get_at(int x, int y)
 {
     return board_[x][y];
 }
+
+Board& Board::operator=(const Board& rhs)
+{
+    if (this != &rhs)
+    {
+        Piece **temp = new Piece*[rows_];
+        for (int i = 0; i < rows_; i++)
+        {
+            temp[i] = new Piece[rows_];
+        }
+        delete board_;
+        for(int i = 0; i < rows_; i++)
+        {
+            for (int j = 0; j < columns_; j++)
+            {
+                temp[i][j] = rhs.board_[i][j];
+            }
+        }
+        board_ = temp;
+        this->display_board();
+    }
+    return *this;
+}

@@ -74,6 +74,9 @@ void Game::record_time()
 {
     Board *temp(board_);
     timeline_.push_back(temp);
+    std::cout << "Temp board" << std::endl;
+    timeline_[timeline_.size()-1]->display_board();
+    std::cout << "Temp board end" << std::endl;
 }
 
 Position Game::convert_coord(int x, int y)

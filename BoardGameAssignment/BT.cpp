@@ -16,7 +16,6 @@ BT::BT(int rows, int cols) : Game(rows, cols)
     movesPlayer2.push_back(make_pair(0,-1));
     movesPlayer2.push_back(make_pair(-1,-1));
 
-
     Position pos1, pos2;
     for (int i = 0; i < board_->get_columns(); i++)
     {

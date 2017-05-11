@@ -19,6 +19,7 @@ class Board
         int get_columns() {return columns_;};
         bool contains_at(Position pos);
         Piece get_at(int x, int y);
+        Board& operator=(const Board& rhs);
     protected:
     private:
         int rows_;
