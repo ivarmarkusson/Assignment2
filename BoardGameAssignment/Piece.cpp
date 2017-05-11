@@ -29,7 +29,7 @@ void Piece::set_position(int x, int y)
 
 bool Piece::operator== (const Piece& rhs) const
 {
-    bool check1 = symbol_ == rhs.get_symbol() && owner_ == rhs.get_owner() && position_.x_  == rhs.get_position().x_
+    /*bool check1 = symbol_ == rhs.get_symbol() && owner_ == rhs.get_owner() && position_.x_  == rhs.get_position().x_
     && position_.y_ == rhs.get_position().y_;
 
     bool check2;
@@ -39,6 +39,6 @@ bool Piece::operator== (const Piece& rhs) const
         {
             if (posible_moves_[i].first)
         }
-    }
+    }*/
     return false;
 }

@@ -8,7 +8,7 @@ class FaH : public Game
     public:
         FaH();
         virtual ~FaH();
-        std::vector<std::pair<Piece,Piece>> legal_moves();
+        virtual std::vector<std::pair<Piece,Piece>> legal_moves();
     protected:
     private:
 };

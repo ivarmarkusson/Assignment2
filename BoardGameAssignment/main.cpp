@@ -10,6 +10,7 @@ void list_games();
 
 int main()
 {
+    /*
     Game *game;
     string input;
     bool debug = false;
@@ -114,7 +115,7 @@ int main()
         {
             debug = true;
         }
-    }
+    }*/
     return 0;
 }
 
