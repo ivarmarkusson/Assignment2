@@ -12,29 +12,15 @@ struct Position
 class Piece
 {
     public:
-        Piece()
-        {
-            symbol_ = '.';
-            owner_ = -1;
-        };
-        Piece(int player,char sym,Position pos, std::vector<std::pair<int,int>> moves)
-        {
-            posible_moves_ = moves;
-            symbol_ = sym;
-            owner_ = player;
-            position_.x_ = pos.x_;
-            position_.y_ = pos.y_;
-        }
-        virtual ~Piece() {}
+        Piece();
+        Piece(int player,char sym,Position pos, std::vector<std::pair<int,int>> moves);
+        virtual ~Piece();
         char get_symbol() {return symbol_;}
         int get_owner() {return owner_;}
         Position get_position() {return position_;}
-        void set_position(int x, int y)
-        {
-            position_.x_ = x;
-            position_.y_ = y;
-        }
+        void set_position(int x, int y);
         std::vector<std::pair<int,int>> get_posible_moves() {return posible_moves_;}
+        bool operator== (const Piece& rhs ) const;
     protected:
     private:
         char symbol_;

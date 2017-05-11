@@ -10,6 +10,7 @@ class Board
 {
     public:
         Board(int row, int col = 0);
+        Board(const Board& b);
         virtual ~Board();
         void move_from_to(Position from, Position to);
         void place_piece(Piece piece);

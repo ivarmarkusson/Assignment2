@@ -62,6 +62,7 @@ Position Game::get_int_from_input(std::string input)
 void Game::display() const
 {
     board_->display_board();
+    std::cout << turn_%2 << std::endl;
 }
 
 void Game::retract()
@@ -71,7 +72,8 @@ void Game::retract()
 
 void Game::record_time()
 {
-    timeline_.push_back(board_);
+    Board *temp(board_);
+    timeline_.push_back(temp);
 }
 
 Position Game::convert_coord(int x, int y)
