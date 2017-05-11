@@ -11,13 +11,12 @@ class Board
     public:
         Board(int row, int col = 0);
         virtual ~Board();
-        void move_from_to(Piece from, Piece to);
-        void get_int_from_input(int& val1, int& val2, std::string input);
+        void move_from_to(Position from, Position to);
         void place_piece(Piece piece);
-        friend std::ostream& operator<<(std::ostream& os, const Board& board);
         void display_board();
         int get_rows() {return rows_;};
         int get_columns() {return columns_;};
+        bool contains_at(Position pos);
     protected:
     private:
         int rows_;

@@ -5,6 +5,8 @@
 #include "player.h"
 #include "BT.h"
 #include "Piece.h"
+#include "MBT.h"
+#include "FaH.h"
 
 using namespace std;
 
@@ -12,8 +14,7 @@ int main()
 {
     BT game(8);
     game.display();
-
-    game.initialize_board();
+    game.move("a8","a9");
     game.display();
 /*
     Board board(8);

@@ -35,27 +35,25 @@ Board::~Board()
     delete [] board_;
 }
 
-void Board::move_from_to(Piece from, Piece to)
+void Board::move_from_to(Position from, Position to)
 {
-    board_[to.get_position().x_][to.get_position().y_] = board_[from.get_position().x_][from.get_position().y_];
-    board_[from.get_position().x_][from.get_position().y_] = Piece();
-
-    /*
-    int from_x = 0,from_y = 0;
-    int to_x = 0, to_y = 0;
-    get_int_from_input(from_x,from_y, from);
-    get_int_from_input(to_x, to_y, to);
-
-    board_[to_x][to_y] = board_[from_x][from_y];
-    board_[from_x][from_y] = Piece();
-    */
+    board_[to.x_][to.y_] = board_[from.x_][from.y_];
+    board_[from.x_][from.y_] = Piece();
 }
 
-void Board::get_int_from_input(int& val1, int& val2, std::string input)
+bool Board::contains_at(Position pos)
 {
-    val1 = input[0] - 97;
-    val2 = abs(input[1] - 48 - rows_);
+    if(board_[pos.x_][pos.y_].get_owner() != -1)
+    {
+        return true;
+    }
+    return false;
+
 }
+
+/**
+*  Places piece at a specific place on the board
+*/
 
 void Board::place_piece(Piece piece)
 {
@@ -65,7 +63,7 @@ void Board::place_piece(Piece piece)
 
 /**
  * Displays the board to the console
- * ONLY use if you want to display on the console
+ * ONLY use if you want to display on the console!!
  */
 
 void Board::display_board()

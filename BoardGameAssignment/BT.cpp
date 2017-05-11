@@ -1,14 +1,7 @@
 #include "BT.h"
 #include <iostream>
 
-BT::BT(int rows, int cols) : Game(rows, cols){}
-
-BT::~BT()
-{
-    //dtor
-}
-
-void BT::initialize_board()
+BT::BT(int rows, int cols) : Game(rows, cols)
 {
     Position pos1, pos2;
     for (int i = 0; i < board_->get_columns(); i++)
@@ -25,4 +18,9 @@ void BT::initialize_board()
             board_->place_piece(p2);
         }
     }
+}
+
+BT::~BT()
+{
+    //dtor
 }
