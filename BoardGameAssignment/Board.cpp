@@ -26,6 +26,21 @@ Board::Board(int row, int col) : rows_(row), columns_(col)
     }
 }
 
+Board::Board(const Board& b)
+{
+    rows_ = b.rows_;
+    columns_ = b.columns_;
+    board_ = new Piece*[rows_];
+    for(int i = 0; i < rows_; i++)
+    {
+        board_[i] = new Piece[columns_];
+        for (int j = 0; j < columns_; j++)
+        {
+            board_[i][j] = b.board_[i][j];
+        }
+    }
+}
+
 Board::~Board()
 {
     for (int i = 0; i < rows_; i++)
