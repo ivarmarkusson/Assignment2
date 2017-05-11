@@ -101,13 +101,13 @@
 1494518971 c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
-1494507989 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
+1494519158 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
 	"Board.h"
 	<iostream>
 	<string>
 	<cstdlib>
 
-1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.h
+1494519158 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.h
 	"Piece.h"
 	<ostream>
 	<string>
@@ -128,11 +128,10 @@
 1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.h
 	"Game.h"
 
-1494509826 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.h
+1494521173 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.h
 	"Board.h"
-	<string>
 
-1494507989 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.cpp
+1494520830 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.cpp
 	"Game.h"
 	<iostream>
 	<string>
@@ -152,10 +151,14 @@
 1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.h
 	"Game.h"
 
-1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.h
+1494519158 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
-1494511217 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
+1494519158 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
 	"FaH.h"
+	<vector>
+
+1494519158 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.cpp
+	"MBT.h"
 	<vector>
 

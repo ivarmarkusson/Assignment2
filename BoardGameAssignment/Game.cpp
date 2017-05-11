@@ -18,6 +18,10 @@ Game::~Game()
     }
 }
 
+Piece Game::get_at_board(int x, int y){
+    return board_->get_at(x,y);
+}
+
 void Game::move(std::string from, std::string to)
 {
     Position fromPos, toPos;
