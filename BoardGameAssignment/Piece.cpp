@@ -29,5 +29,5 @@ void Piece::set_position(int x, int y)
 
 bool Piece::operator== (const Piece& rhs) const
 {
-
+    return false;
 }

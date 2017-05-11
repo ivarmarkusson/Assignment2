@@ -1,7 +1,11 @@
 #include "MBT.h"
-#include <vector>
 
 using namespace std;
+
+vector<pair<Piece,Piece>> MBT::legal_moves(){
+    vector<pair<Piece,Piece>> moves;
+    return moves;
+}
 
 MBT::MBT(int rows, int cols) : Game(rows, cols)
 {

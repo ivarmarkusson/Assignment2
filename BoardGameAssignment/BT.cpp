@@ -37,3 +37,9 @@ BT::~BT()
 {
     //dtor
 }
+
+
+vector<pair<Piece,Piece>> BT::legal_moves(){
+    vector<pair<Piece,Piece>> moves;
+    return moves;
+}
