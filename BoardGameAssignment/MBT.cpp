@@ -27,7 +27,6 @@ MBT::MBT(int rows, int cols) : Game(rows, cols)
     movesPlayer2MegaPawn.push_back(make_pair(0,-2));
     movesPlayer2MegaPawn.push_back(make_pair(-1,-1));
 
-
     Position pos1, pos2;
     for (int i = 0; i < board_->get_columns(); i++)
     {

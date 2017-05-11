@@ -14,8 +14,10 @@ void list_games();
 
 int main()
 {
+
     Game *game;
     string input;
+    bool debug = false;
     while(input != "quit")
     {
         cin >> input;
@@ -32,14 +34,17 @@ int main()
                 case(1):
                 {
                     game = new BT(8);
+                    break;
                 }
                 case(2):
                 {
                     game = new FaH;
+                    break;
                 }
                 case(3):
                 {
                     game = new MBT(8);
+                    break;
                 }
             }
         }
@@ -57,10 +62,15 @@ int main()
             cin >> from_square;
             cin >> to_square;
             game->move(from_square, to_square);
+            if(debug)
+            {
+                game->display();
+            }
+            game->increase_turn();
         }
         else if(input == "retract")
         {
-
+            game->decrease_turn();
         }
         else if(input == "display")
         {
@@ -72,7 +82,7 @@ int main()
         }
         else if(input == "go")
         {
-
+            game->increase_turn();
         }
         else if(input == "level")
         {
@@ -80,10 +90,12 @@ int main()
         }
         else if (input == "debug")
         {
-
+            debug = true;
         }
     }
     return 0;
+
+
 }
 
 void list_games()

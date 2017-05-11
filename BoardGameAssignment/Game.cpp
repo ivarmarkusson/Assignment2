@@ -6,11 +6,16 @@
 Game::Game(int rows, int cols)
 {
     board_ = new Board(rows,cols);
+    turn_ = 0;
 }
 
 Game::~Game()
 {
     delete board_;
+    for(size_t i = 0; i < timeline_.size(); i++)
+    {
+        delete timeline_[i];
+    }
 }
 
 void Game::move(std::string from, std::string to)
@@ -57,4 +62,23 @@ Position Game::get_int_from_input(std::string input)
 void Game::display() const
 {
     board_->display_board();
+}
+
+void Game::retract()
+{
+    timeline_.push_back(board_);
+}
+
+void Game::record_time()
+{
+    timeline_.push_back(board_);
+}
+
+Position Game::convert_coord(int x, int y)
+{
+    Position pos;
+    pos.x_ = x;
+    pos.y_ = abs(y - board_->get_rows()+1);
+    return pos;
+
 }
