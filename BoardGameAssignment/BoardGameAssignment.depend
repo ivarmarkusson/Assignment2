@@ -102,3 +102,61 @@
 1494442724 c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
+1494507989 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
+	"Board.h"
+	<iostream>
+	<string>
+	<cstdlib>
+
+1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.h
+	"Piece.h"
+	<ostream>
+	<string>
+	"Player.h"
+
+1494510995 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\piece.h
+	<vector>
+
+1494440347 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\player.h
+	<vector>
+	"Piece.h"
+
+1494511003 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.cpp
+	"BT.h"
+	<iostream>
+	<vector>
+
+1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.h
+	"Game.h"
+
+1494509826 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.h
+	"Board.h"
+	<string>
+
+1494507989 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.cpp
+	"Game.h"
+	<iostream>
+	<string>
+	<stdlib.h>
+
+1494507989 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\main.cpp
+	<iostream>
+	"Board.h"
+	<string>
+	<algorithm>
+	"player.h"
+	"BT.h"
+	"Piece.h"
+	"MBT.h"
+	"FaH.h"
+
+1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.h
+	"Game.h"
+
+1494507989 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.h
+	"Game.h"
+
+1494511217 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
+	"FaH.h"
+	<vector>
+

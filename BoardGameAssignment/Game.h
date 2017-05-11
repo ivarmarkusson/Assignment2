@@ -12,6 +12,7 @@ class Game
         void display() const;
         void move(std::string from, std::string to );
 
+
     protected:
         Board *board_;
         int turn_;
