@@ -85,3 +85,8 @@ void Board::display_board()
     }
     std::cout << std::endl;
 }
+
+Piece Board::get_at(int x, int y)
+{
+    return board_[x][y];
+}

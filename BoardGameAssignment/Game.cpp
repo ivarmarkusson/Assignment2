@@ -66,7 +66,7 @@ void Game::display() const
 
 void Game::retract()
 {
-    timeline_.push_back(board_);
+    board_ = timeline_[timeline_.size()-1];
 }
 
 void Game::record_time()
@@ -80,5 +80,4 @@ Position Game::convert_coord(int x, int y)
     pos.x_ = x;
     pos.y_ = abs(y - board_->get_rows()+1);
     return pos;
-
 }

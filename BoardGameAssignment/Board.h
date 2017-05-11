@@ -17,6 +17,7 @@ class Board
         int get_rows() {return rows_;};
         int get_columns() {return columns_;};
         bool contains_at(Position pos);
+        Piece get_at(int x, int y);
     protected:
     private:
         int rows_;

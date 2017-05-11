@@ -1,10 +1,6 @@
 #include <iostream>
 #include "Board.h"
-#include <string>
-#include <algorithm>
-#include "player.h"
 #include "BT.h"
-#include "Piece.h"
 #include "MBT.h"
 #include "FaH.h"
 
@@ -14,7 +10,6 @@ void list_games();
 
 int main()
 {
-
     Game *game;
     string input;
     bool debug = false;
@@ -58,6 +53,7 @@ int main()
         }
         else if (input == "move")
         {
+            game->record_time();
             string from_square,to_square;
             cin >> from_square;
             cin >> to_square;
@@ -70,6 +66,7 @@ int main()
         }
         else if(input == "retract")
         {
+            game->retract();
             game->decrease_turn();
         }
         else if(input == "display")
@@ -94,8 +91,6 @@ int main()
         }
     }
     return 0;
-
-
 }
 
 void list_games()

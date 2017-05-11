@@ -2,8 +2,7 @@
 #define GAME_H
 
 #include "Board.h"
-#include <string>
-#include <vector>
+
 
 class Game
 {
