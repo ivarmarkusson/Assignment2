@@ -83,19 +83,19 @@ void Board::place_piece(Piece piece)
 void Board::display_board()
 {
     std::string alpha ("abcdefghi");
-    for (int i = 0; i < rows_; i++)
+    for (int i = rows_-1; i >= 0; i--)
     {
-        std::cout << rows_- i;
+        std::cout << i+1 << " ";
         for (int j = 0; j < columns_; j++)
         {
-            std::cout << board_[j][i].get_symbol();
+            std::cout  <<  board_[j][i].get_symbol() << " ";
         }
         std::cout << std::endl;
     }
-    std::cout << " ";
+    std::cout << "  ";
     for (int i = 0; i < columns_; i++)
     {
-        std::cout << alpha[i];
+        std::cout << alpha[i] << " ";
     }
     std::cout << std::endl;
 }

@@ -21,10 +21,10 @@ BT::BT(int rows, int cols) : Game(rows, cols)
     {
         for (int j = 0; j < 2; j++)
         {
-            pos1.x_ = i;
             pos2.x_ = i;
-            pos1.y_ = board_->get_rows()-j-1;
-            pos2.y_ = j;
+            pos1.x_ = i;
+            pos2.y_ = board_->get_rows()-j-1;
+            pos1.y_ = j;
             Piece p1(0,'P',pos1, movesPlayer1);
             Piece p2(1,'p',pos2, movesPlayer2);
             board_->place_piece(p1);

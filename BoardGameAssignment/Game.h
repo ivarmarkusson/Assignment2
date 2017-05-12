@@ -15,7 +15,6 @@ class Game
         void move(std::string from, std::string to );
         void retract();
         void record_time();
-        Position convert_coord(int x, int y);
         Position get_int_from_input(std::string input);
         Piece get_at_board(int x, int y);
     protected:

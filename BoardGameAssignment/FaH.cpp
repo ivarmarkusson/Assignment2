@@ -19,12 +19,12 @@ FaH::FaH() : Game(8)
     for (int i = 1; i < board_->get_columns(); i+= 2)
     {
         pos.x_ = i;
-        pos.y_ = 0;
+        pos.y_ = board_->get_columns()-1;
         Piece h(1,'H', pos, movesHound);
         board_->place_piece(h);
     }
     pos.x_ = board_->get_columns()/2;
-    pos.y_ = board_->get_columns()-1;
+    pos.y_ = 0;
     Piece f(0,'F',pos, movesFox);
     board_->place_piece(f);
 }
@@ -36,6 +36,7 @@ FaH::~FaH()
 
 vector<pair<Piece,Piece>> FaH::legal_moves()
 {
+    /*
     int player_turn = turn_ % 2;
     Position from;
     Piece current_piece;
@@ -67,7 +68,9 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
             }
         }
     }
+
     return moves;
+*/
 }
 
 

@@ -34,10 +34,10 @@ MBT::MBT(int rows, int cols) : Game(rows, cols)
     Position pos1, pos2;
     for (int i = 0; i < board_->get_columns(); i++)
     {
-        pos1.x_ = i;
         pos2.x_ = i;
-        pos1.y_ = board_->get_rows()-1;
-        pos2.y_ = 0;
+        pos1.x_ = i;
+        pos2.y_ = board_->get_rows()-1;
+        pos1.y_ = 0;
         Piece p1(0,'M',pos1, movesPlayer1MegaPawn);
         Piece p2(1,'m',pos2, movesPlayer2MegaPawn);
         board_->place_piece(p1);
@@ -45,10 +45,10 @@ MBT::MBT(int rows, int cols) : Game(rows, cols)
     }
     for (int i = 0; i < board_->get_columns(); i++)
     {
-        pos1.x_ = i;
         pos2.x_ = i;
-        pos1.y_ = board_->get_rows()-2;
-        pos2.y_ = 1;
+        pos1.x_ = i;
+        pos2.y_ = board_->get_rows()-2;
+        pos1.y_ = 1;
         Piece p1(0,'P',pos1, movesPlayer1Pawn);
         Piece p2(1,'p',pos2, movesPlayer2Pawn);
         board_->place_piece(p1);
