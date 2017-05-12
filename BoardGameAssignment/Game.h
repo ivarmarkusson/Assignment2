@@ -13,8 +13,6 @@ class Game
         virtual void start() = 0;
         void display() const;
         void move(std::string from, std::string to );
-        void increase_turn() {turn_++;};
-        void decrease_turn() {turn_--;};
         void retract();
         void record_time();
         Position convert_coord(int x, int y);
@@ -25,6 +23,8 @@ class Game
         int turn_;
         std::vector<Board*> timeline_;
     private:
+        void increase_turn() {turn_++;};
+        void decrease_turn() {turn_--;};
 
 };
 

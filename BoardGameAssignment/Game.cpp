@@ -18,12 +18,14 @@ Game::~Game()
     }
 }
 
-Piece Game::get_at_board(int x, int y){
+Piece Game::get_at_board(int x, int y)
+{
     return board_->get_at(x,y);
 }
 
 void Game::move(std::string from, std::string to)
 {
+    increase_turn();
     Position fromPos, toPos;
     std::string alphabet = "abcdefghi";
     int alphavalueFrom, alphaValueTo;
@@ -34,20 +36,24 @@ void Game::move(std::string from, std::string to)
         {
             if(isalpha(from.at(0)) && isalpha(to.at(0)))
             {
-                alphavalueFrom = alphabet.find(from.at(0));
-                alphaValueTo = alphabet.find(to.at(0));
-                if(   (alphavalueFrom >= 0 && alphavalueFrom < board_->get_columns())
-                        && (alphaValueTo >= 0 && alphaValueTo < board_->get_columns()) )
+                if(from.at(1) - 48 < board_->get_columns() && to.at(1) - 48 < board_->get_columns())
                 {
-                    fromPos = get_int_from_input(from);
-                    toPos = get_int_from_input(to);
-                    if(     (fromPos.y_ >= 0 && fromPos.y_ < board_->get_rows())
-                            &&  (toPos.y_ >= 0 && toPos.y_ < board_->get_rows()))
+                    alphavalueFrom = alphabet.find(from.at(0));
+                    alphaValueTo = alphabet.find(to.at(0));
+                    if(   (alphavalueFrom >= 0 && alphavalueFrom < board_->get_columns())
+                            && (alphaValueTo >= 0 && alphaValueTo < board_->get_columns()) )
                     {
-                        if(board_->contains_at(fromPos))
+                        fromPos = get_int_from_input(from);
+                        toPos = get_int_from_input(to);
+                        if(     (fromPos.y_ >= 0 && fromPos.y_ < board_->get_rows())
+                                &&  (toPos.y_ >= 0 && toPos.y_ < board_->get_rows()))
                         {
-                            board_->move_from_to(fromPos, toPos);
+                            if(board_->contains_at(fromPos))
+                            {
+                                board_->move_from_to(fromPos, toPos);
+                            }
                         }
+
                     }
                 }
             }
@@ -68,7 +74,7 @@ void Game::display() const
     board_->display_board();
     std::cout << turn_%2 << std::endl;
     std::cout << board_->count_pieces_for_owner(0) << " "
-    << board_->count_pieces_for_owner(1) << std::endl;
+              << board_->count_pieces_for_owner(1) << std::endl;
 }
 
 void Game::retract()

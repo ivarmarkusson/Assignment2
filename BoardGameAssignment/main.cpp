@@ -84,7 +84,6 @@ int main()
                 cout << "Illegal move" << endl;
             }
 */
-            game->increase_turn();
         }
         else if(input == "retract")
         {
@@ -100,11 +99,27 @@ int main()
         }
         else if(input == "go")
         {
-            game->increase_turn();
+
         }
         else if(input == "level")
         {
+            cin >> input;
+            if(input == "random")
+            {
 
+            }
+            else if (input == "easy")
+            {
+
+            }
+            else if (input == "medium")
+            {
+
+            }
+            else if (input == "hard")
+            {
+
+            }
         }
         else if (input == "debug")
         {

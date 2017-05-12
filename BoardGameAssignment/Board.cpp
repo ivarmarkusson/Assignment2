@@ -63,7 +63,6 @@ bool Board::contains_at(Position pos)
         return true;
     }
     return false;
-
 }
 
 /**
