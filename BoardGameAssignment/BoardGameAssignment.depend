@@ -102,13 +102,13 @@
 1494589107 c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
-1494525523 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
+1494595470 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
 	"Board.h"
 	<iostream>
 	<string>
 	<cstdlib>
 
-1494525523 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.h
+1494591863 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.h
 	"Piece.h"
 	<ostream>
 	<string>
@@ -121,39 +121,39 @@
 	<vector>
 	"Piece.h"
 
-1494525523 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.cpp
+1494595470 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.cpp
 	"BT.h"
 	<iostream>
 	<vector>
 
-1494524675 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.h
+1494591863 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\bt.h
 	"Game.h"
 	<vector>
 
-1494525296 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.h
+1494597104 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.h
 	"Board.h"
 
-1494525523 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.cpp
+1494597104 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\game.cpp
 	"Game.h"
 	<iostream>
 	<string>
 	<stdlib.h>
 
-1494525523 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\main.cpp
+1494595555 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\main.cpp
 	<iostream>
 	"Board.h"
 	"BT.h"
 	"MBT.h"
 	"FaH.h"
 
-1494524921 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.h
+1494591863 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.h
 	"Game.h"
 	<vector>
 
-1494525098 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.h
+1494597104 c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
-1494525073 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
+1494597385 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\fah.cpp
 	"FaH.h"
 	<vector>
 
@@ -162,10 +162,11 @@
 1494527350 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\piece.cpp
 	"Piece.h"
 
-1494525224 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.cpp
+1494595470 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\mbt.cpp
 	"MBT.h"
 
-1494524327 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\piece.cpp
+1494526684 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\piece.cpp
+	"Piece.h"
 
 1494524327 e36d1b3a0baa014cecfc8883c327019c8b81f
 	"Piece.h"

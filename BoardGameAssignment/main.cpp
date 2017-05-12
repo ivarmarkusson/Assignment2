@@ -59,16 +59,12 @@ int main()
             cin >> from_square;
             cin  >> to_square;
 
-            game->move(from_square, to_square);
-/*
+
             Position from = game->get_int_from_input(from_square);
             Position to = game->get_int_from_input(to_square);
 
-            Position pos_from = game->convert_coord(from.x_, from.y_);
-            Position pos_to = game->convert_coord(to.x_, to.y_);
-
-            Piece piece_from = game->get_at_board(pos_from.x_, pos_from.y_);
-            Piece piece_to = game->get_at_board(pos_to.x_, pos_to.y_);
+            Piece piece_from = game->get_at_board(from.x_, from.y_);
+            Piece piece_to = game->get_at_board(to.x_, to.y_);
 
             bool validMove = false;
 
@@ -83,7 +79,7 @@ int main()
             if(!validMove){
                 cout << "Illegal move" << endl;
             }
-*/
+
         }
         else if(input == "retract")
         {

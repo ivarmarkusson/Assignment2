@@ -58,6 +58,8 @@ void Game::move(std::string from, std::string to)
     }
 }
 
+
+
 Position Game::get_int_from_input(std::string input)
 {
     Position pos;

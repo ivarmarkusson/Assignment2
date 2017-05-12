@@ -6,8 +6,8 @@ using namespace std;
 FaH::FaH() : Game(8)
 {
     vector<pair<int,int>> movesHound;
-    movesHound.push_back(make_pair(1,1));
-    movesHound.push_back(make_pair(-1,1));
+    movesHound.push_back(make_pair(1,-1));
+    movesHound.push_back(make_pair(-1,-1));
 
     vector<pair<int,int>> movesFox;
     movesFox.push_back(make_pair(1,1));
@@ -36,7 +36,6 @@ FaH::~FaH()
 
 vector<pair<Piece,Piece>> FaH::legal_moves()
 {
-    /*
     int player_turn = turn_ % 2;
     Position from;
     Piece current_piece;
@@ -46,7 +45,8 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
     {
         for(int j = 0; j < board_->get_columns(); j++)
         {
-            from = convert_coord(i,j);
+            from.x_ = i;
+            from.y_ = j;
             current_piece = board_->get_at(from.x_,from.y_);
             if(current_piece.get_owner() == player_turn)
             {
@@ -70,7 +70,6 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
     }
 
     return moves;
-*/
 }
 
 
