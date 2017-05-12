@@ -11,6 +11,7 @@ class Game
         virtual ~Game();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves() = 0;
         virtual void start() = 0;
+        void legal();
         void display() const;
         void move(std::string from, std::string to );
         void retract();
@@ -22,6 +23,7 @@ class Game
         Board *board_;
         int turn_;
         std::vector<Board*> timeline_;
+
     private:
         void increase_turn() {turn_++;};
         void decrease_turn() {turn_--;};

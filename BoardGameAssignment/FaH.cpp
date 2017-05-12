@@ -38,8 +38,8 @@ std::vector<std::pair<Piece,Piece>> FaH::legal_moves()
     int player_turn = turn_ % 2;
     Position from;
     Piece current_piece;
-    std::vector<std::pair<Piece,Piece>> moves;
 
+    std::vector<std::pair<Piece,Piece>> moves_;
     for(int i = 0; i < board_->get_rows(); i++)
     {
         for(int j = 0; j < board_->get_columns(); j++)
@@ -60,19 +60,14 @@ std::vector<std::pair<Piece,Piece>> FaH::legal_moves()
                         Piece target = board_->get_at(row,col);
                         if(target.get_owner() == -1)
                         {
-                            moves.push_back(std::make_pair(current_piece, target));
+                            moves_.push_back(std::make_pair(current_piece, target));
                         }
                     }
                 }
             }
         }
     }
-    std::cout << "legal moves" << std::endl;
-    for(size_t i = 0; i < moves.size(); i++){
-        std::cout << "first: (" << moves[i].first.get_position().x_ << ", " << moves[i].first.get_position().y_ << ") ->";
-        std::cout << "second: (" << moves[i].second.get_position().x_ << ", " << moves[i].second.get_position().y_ << ")" << std::endl;
-    }
-    return moves;
+    return moves_;
 }
 
 
@@ -81,3 +76,5 @@ void FaH::start()
     FaH *temp = new FaH;
     *this = *temp;
 }
+
+

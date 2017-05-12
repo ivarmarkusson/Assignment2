@@ -46,6 +46,7 @@ vector<pair<Piece,Piece>> BT::legal_moves()
     int enemy_turn = abs(turn_%2 - 1);
     Position from;
     Piece current_piece;
+
     std::vector<std::pair<Piece,Piece>> moves;
 
     for(int i = 0; i < board_->get_rows(); i++)
@@ -83,3 +84,5 @@ void BT::start()
     BT *temp = new BT(board_->get_rows(), board_->get_columns());
     *this = *temp;
 }
+
+

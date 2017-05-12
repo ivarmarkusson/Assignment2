@@ -7,6 +7,7 @@ Game::Game(int rows, int cols)
 {
     board_ = new Board(rows,cols);
     turn_ = 0;
+    timeline_.clear();
 }
 
 Game::~Game()
@@ -26,7 +27,6 @@ Piece Game::get_at_board(int x, int y)
 void Game::move(std::string from, std::string to)
 {
     increase_turn();
-    std::cout << "TURN IS INCREASED!!" <<  std::endl;
     Position fromPos, toPos;
     std::string alphabet = "abcdefghi";
     int alphavalueFrom, alphaValueTo;
@@ -92,4 +92,21 @@ void Game::record_time()
 {
     Board *temp = new Board(*board_);
     timeline_.push_back(temp);
+}
+
+void Game::legal()
+{
+    std::vector<std::pair<Piece,Piece>> moves = legal_moves();
+    char fromX, toX;
+    int fromY, toY;
+    std::cout << "legal moves" << std::endl;
+    for(size_t i = 0; i < moves.size(); i++)
+    {
+        fromX = moves[i].first.get_position().x_ + 97;
+        fromY = moves[i].first.get_position().y_ + 1;
+        toX = moves[i].second.get_position().x_ + 97;
+        toY = moves[i].second.get_position().y_ + 1;
+        std::cout << "From: (" << fromX << ", " << fromY << ") ->";
+        std::cout << "To: (" << toX << ", " << toY  << ")" << std::endl;
+    }
 }

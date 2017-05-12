@@ -49,7 +49,7 @@ int main()
         }
         else if(input == "legal")
         {
-
+            game->legal();
         }
         else if (input == "move")
         {
