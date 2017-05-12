@@ -10,6 +10,7 @@ class MBT : public Game
         MBT(int rows, int cols = 0);
         virtual ~MBT();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves();
+        virtual void start();
     protected:
     private:
 };

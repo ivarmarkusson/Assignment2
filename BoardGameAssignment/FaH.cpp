@@ -69,3 +69,10 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
     }
     return moves;
 }
+
+
+void FaH::start()
+{
+    FaH *temp = new FaH;
+    *this = *temp;
+}

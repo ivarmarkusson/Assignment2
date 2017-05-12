@@ -10,6 +10,7 @@ class Game
         Game(int rows, int cols = 0);
         virtual ~Game();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves() = 0;
+        virtual void start() = 0;
         void display() const;
         void move(std::string from, std::string to );
         void increase_turn() {turn_++;};

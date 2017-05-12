@@ -10,7 +10,6 @@ void list_games();
 
 int main()
 {
-
     Game *game;
     string input;
     bool debug = false;
@@ -46,7 +45,7 @@ int main()
         }
         else if(input == "start")
         {
-
+            game->start();
         }
         else if(input == "legal")
         {
@@ -58,7 +57,7 @@ int main()
 
             string from_square,to_square;
             cin >> from_square;
-            cin >> to_square;
+            cin  >> to_square;
 
             game->move(from_square, to_square);
 /*
@@ -85,17 +84,11 @@ int main()
                 cout << "Illegal move" << endl;
             }
 */
-            if(debug)
-            {
-                game->display();
-            }
-
             game->increase_turn();
         }
         else if(input == "retract")
         {
             game->retract();
-            game->decrease_turn();
         }
         else if(input == "display")
         {
@@ -116,6 +109,10 @@ int main()
         else if (input == "debug")
         {
             debug = true;
+        }
+        if (debug)
+        {
+            game->display();
         }
     }
     return 0;

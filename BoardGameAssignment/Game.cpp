@@ -71,23 +71,19 @@ void Game::display() const
 
 void Game::retract()
 {
-    timeline_.pop_back();
-    std::cout << "Retract board" << std::endl;
-    for (int i = 0; i < timeline_.size();i++)
+    if(timeline_.empty())
     {
-        timeline_[i]->display_board();
+        return;
     }
-    std::cout << "Retract board end" << std::endl;
     board_ = timeline_[timeline_.size()-1];
+    timeline_.pop_back();
+    decrease_turn();
 }
 
 void Game::record_time()
 {
-    Board *temp(board_);
+    Board *temp = new Board(*board_);
     timeline_.push_back(temp);
-    std::cout << "Temp board" << std::endl;
-    timeline_[timeline_.size()-1]->display_board();
-    std::cout << "Temp board end" << std::endl;
 }
 
 Position Game::convert_coord(int x, int y)

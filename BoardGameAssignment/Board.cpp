@@ -113,9 +113,11 @@ Board& Board::operator=(const Board& rhs)
         Piece **temp = new Piece*[rows_];
         for (int i = 0; i < rows_; i++)
         {
+            delete [] board_[i];
             temp[i] = new Piece[rows_];
         }
-        delete board_;
+        delete [] board_;
+
         for(int i = 0; i < rows_; i++)
         {
             for (int j = 0; j < columns_; j++)
@@ -124,7 +126,6 @@ Board& Board::operator=(const Board& rhs)
             }
         }
         board_ = temp;
-        this->display_board();
     }
     return *this;
 }
