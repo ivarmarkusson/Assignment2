@@ -67,6 +67,8 @@ void Game::display() const
 {
     board_->display_board();
     std::cout << turn_%2 << std::endl;
+    std::cout << board_->count_pieces_for_owner(0) << " "
+    << board_->count_pieces_for_owner(1) << std::endl;
 }
 
 void Game::retract()

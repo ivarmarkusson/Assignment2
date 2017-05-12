@@ -20,6 +20,7 @@ class Board
         bool contains_at(Position pos);
         Piece get_at(int x, int y);
         Board& operator=(const Board& rhs);
+        int count_pieces_for_owner(int owner);
     protected:
     private:
         int rows_;

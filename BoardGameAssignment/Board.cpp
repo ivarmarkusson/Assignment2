@@ -129,3 +129,19 @@ Board& Board::operator=(const Board& rhs)
     }
     return *this;
 }
+
+int Board::count_pieces_for_owner(int owner)
+{
+    int counter = 0;
+    for(int i = 0; i < rows_; i++)
+    {
+        for (int j = 0; j < columns_; j++)
+        {
+            if (board_[i][j].get_owner() == owner)
+            {
+                counter++;
+            }
+        }
+    }
+    return counter;
+}
