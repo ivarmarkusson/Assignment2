@@ -54,7 +54,6 @@ int main()
         else if (input == "move")
         {
             game->record_time();
-
             string from_square,to_square;
             cin >> from_square;
             cin  >> to_square;
@@ -124,6 +123,7 @@ int main()
         if (debug)
         {
             game->display();
+            cout << game->get_turns() << endl;
         }
     }
     return 0;

@@ -8,7 +8,7 @@ Piece::Piece()
     owner_ = -1;
 }
 
-Piece::Piece(int player,char sym,Position pos, vector<std::pair<int,int> > moves)
+Piece::Piece(int player,char sym,Position pos, vector<std::pair<int,int> > moves )
 {
     posible_moves_ = moves;
     symbol_ = sym;
@@ -59,3 +59,5 @@ bool Piece::operator== (const Piece& rhs) const
 
     return true;
 }
+
+

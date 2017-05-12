@@ -17,6 +17,7 @@ class Game
         void record_time();
         Position get_int_from_input(std::string input);
         Piece get_at_board(int x, int y);
+        int get_turns() {return turn_;};
     protected:
         Board *board_;
         int turn_;

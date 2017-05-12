@@ -1,19 +1,18 @@
 #include "FaH.h"
 #include <vector>
-
-using namespace std;
+#include <iostream>
 
 FaH::FaH() : Game(8)
 {
-    vector<pair<int,int>> movesHound;
-    movesHound.push_back(make_pair(1,-1));
-    movesHound.push_back(make_pair(-1,-1));
+    std::vector<std::pair<int,int>> movesHound;
+    movesHound.push_back(std::make_pair(1,-1));
+    movesHound.push_back(std::make_pair(-1,-1));
 
-    vector<pair<int,int>> movesFox;
-    movesFox.push_back(make_pair(1,1));
-    movesFox.push_back(make_pair(-1,1));
-    movesFox.push_back(make_pair(1,-1));
-    movesFox.push_back(make_pair(-1,-1));
+    std::vector<std::pair<int,int>> movesFox;
+    movesFox.push_back(std::make_pair(1,1));
+    movesFox.push_back(std::make_pair(-1,1));
+    movesFox.push_back(std::make_pair(1,-1));
+    movesFox.push_back(std::make_pair(-1,-1));
 
     Position pos;
     for (int i = 1; i < board_->get_columns(); i+= 2)
@@ -34,12 +33,12 @@ FaH::~FaH()
     //dtor
 }
 
-vector<pair<Piece,Piece>> FaH::legal_moves()
+std::vector<std::pair<Piece,Piece>> FaH::legal_moves()
 {
     int player_turn = turn_ % 2;
     Position from;
     Piece current_piece;
-    vector<pair<Piece,Piece>> moves;
+    std::vector<std::pair<Piece,Piece>> moves;
 
     for(int i = 0; i < board_->get_rows(); i++)
     {
@@ -50,10 +49,10 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
             current_piece = board_->get_at(from.x_,from.y_);
             if(current_piece.get_owner() == player_turn)
             {
-                vector<pair<int,int>> posible_moves = current_piece.get_posible_moves();
+                std::vector<std::pair<int,int>> posible_moves = current_piece.get_posible_moves();
                 for(size_t k = 0; k < posible_moves.size(); k++)
                 {
-                    pair<int,int> move = posible_moves[k];
+                    std::pair<int,int> move = posible_moves[k];
                     int row = from.x_ + move.first;
                     int col = from.y_ + move.second;
                     if(row < board_->get_rows() && row >= 0 && col < board_->get_columns() && col >= 0)
@@ -61,14 +60,18 @@ vector<pair<Piece,Piece>> FaH::legal_moves()
                         Piece target = board_->get_at(row,col);
                         if(target.get_owner() == -1)
                         {
-                            moves.push_back(make_pair(current_piece, target));
+                            moves.push_back(std::make_pair(current_piece, target));
                         }
                     }
                 }
             }
         }
     }
-
+    std::cout << "legal moves" << std::endl;
+    for(size_t i = 0; i < moves.size(); i++){
+        std::cout << "first: (" << moves[i].first.get_position().x_ << ", " << moves[i].first.get_position().y_ << ") ->";
+        std::cout << "second: (" << moves[i].second.get_position().x_ << ", " << moves[i].second.get_position().y_ << ")" << std::endl;
+    }
     return moves;
 }
 

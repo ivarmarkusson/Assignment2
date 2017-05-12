@@ -24,6 +24,14 @@ Board::Board(int row, int col) : rows_(row), columns_(col)
             board_[i] = new Piece[rows_];
         }
     }
+    for(int i = 0; i < rows_; i++)
+    {
+        for (int j = 0; j < columns_; j++)
+        {
+            board_[i][j].set_position(i,j);
+        }
+    }
+
 }
 
 Board::Board(const Board& b)

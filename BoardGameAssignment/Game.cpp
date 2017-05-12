@@ -26,6 +26,7 @@ Piece Game::get_at_board(int x, int y)
 void Game::move(std::string from, std::string to)
 {
     increase_turn();
+    std::cout << "TURN IS INCREASED!!" <<  std::endl;
     Position fromPos, toPos;
     std::string alphabet = "abcdefghi";
     int alphavalueFrom, alphaValueTo;
