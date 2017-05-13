@@ -119,7 +119,6 @@ std::vector<std::pair<Piece,Piece>> MBT::legal_moves()
             }
         }
     }
-
     return moves_;
 }
 
@@ -128,5 +127,3 @@ void MBT::start()
     MBT *temp = new MBT(board_->get_rows(), board_->get_columns());
     *this = *temp;
 }
-
-

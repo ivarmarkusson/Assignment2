@@ -124,11 +124,8 @@ std::vector<std::pair<Piece,Piece>> FaH::legal_moves()
     return moves_;
 }
 
-
 void FaH::start()
 {
     FaH *temp = new FaH;
     *this = *temp;
 }
-
-
