@@ -26,7 +26,7 @@
 1494436804 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\game.h
 	"Board.h"
 
-1494698934 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\main.cpp
+1494699119 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\main.cpp
 	<iostream>
 	"Board.h"
 	"BT.h"
@@ -68,16 +68,16 @@
 	"Game.h"
 	<vector>
 
-1494697432 c:\users\gylfi\desktop\assignment2\boardgameassignment\game.h
+1494699503 c:\users\gylfi\desktop\assignment2\boardgameassignment\game.h
 	"Board.h"
 
-1494696098 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.cpp
+1494702142 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.cpp
 	"BT.h"
 	<iostream>
 	<vector>
 	<stdlib.h>
 
-1494698731 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
+1494702454 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
 	"Game.h"
 	<iostream>
 	<string>
@@ -104,7 +104,7 @@
 	<vector>
 	<iostream>
 
-1494696098 c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.h
+1494699503 c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.h
 	"Game.h"
 
 1494695480 source:c:\users\notandi\desktop\nám hr\2017 - 2017 vor Önn\hlutbundin forritun\assignment2\boardgameassignment\board.cpp
