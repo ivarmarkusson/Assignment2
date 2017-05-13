@@ -2,12 +2,14 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include <ctime>
 
 Game::Game(int rows, int cols)
 {
     board_ = new Board(rows,cols);
     turn_ = 0;
     timeline_.clear();
+    level_ = 'r';
 }
 
 Game::~Game()
@@ -108,5 +110,24 @@ void Game::legal()
         toY = moves[i].second.get_position().y_ + 1;
         std::cout << "From: (" << fromX << ", " << fromY << ") ->";
         std::cout << "To: (" << toX << ", " << toY  << ")" << std::endl;
+    }
+}
+
+void Game::AI_move()
+{
+    Position from;
+    Position to;
+    if(level_ == 'r')
+    {
+        int random = 0;
+        srand(time(0));
+        std::vector<std::pair<Piece,Piece>> moves = legal_moves();
+        random = (rand() % moves.size());
+        std::cout << "random number: " << random << std::endl;
+        std::cout << "moves.size: " << moves.size() << std::endl;
+        from = moves.at(random).first.get_position();
+        to = moves.at(random).second.get_position();
+        board_->move_from_to(from, to);
+        increase_turn();
     }
 }

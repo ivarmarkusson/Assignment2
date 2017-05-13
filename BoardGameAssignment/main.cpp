@@ -78,7 +78,6 @@ int main()
             if(!validMove){
                 cout << "Illegal move" << endl;
             }
-
         }
         else if(input == "retract")
         {
@@ -94,7 +93,7 @@ int main()
         }
         else if(input == "go")
         {
-
+            game->AI_move();
         }
         else if(input == "level")
         {

@@ -23,7 +23,7 @@ class Game
         int get_turns() {return turn_;};
         void set_level(char l) {level_ = l;}
         char get_level() {return level_;}
-
+        void AI_move();
 
     protected:
         Board *board_;

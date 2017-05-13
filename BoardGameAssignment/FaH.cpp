@@ -37,8 +37,6 @@ int FaH::evaluate(){
     int player = turn_ % 2;
     char terminal_status = terminal_state();
 
-
-
     if(player == 0){
         switch(terminal_status){
             case('w'):{
