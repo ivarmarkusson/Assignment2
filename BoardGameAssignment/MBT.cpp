@@ -56,12 +56,24 @@ MBT::~MBT()
 
 }
 
-int MBT::evaluate(){
-    return 0;
+char MBT::terminal_state(){
+    for(int i = 0; i < board_->get_columns(); i++){
+        if(board_->get_at(i,0).get_owner() == 1){
+            return 'l'; // Player 2 wins
+        }
+        if(board_->get_at(i,board_->get_rows()-1).get_owner() == 0){
+            return 'w'; // Player 1 wins
+        }
+    }
+    if(legal_moves().empty()){
+        return 't'; // tie
+    }
+
+    return 'n'; // not a terminal state
 }
 
-char MBT::terminal_state(){
-    return 'n';
+int MBT::evaluate(){
+    return 0;
 }
 
 std::vector<std::pair<Piece,Piece>> MBT::legal_moves()

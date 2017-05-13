@@ -136,12 +136,28 @@ void Game::AI_move()
         srand(time(0));
         std::vector<std::pair<Piece,Piece>> moves = legal_moves();
         random = (rand() % moves.size());
-        std::cout << "random number: " << random << std::endl;
-        std::cout << "moves.size: " << moves.size() << std::endl;
         from = moves.at(random).first.get_position();
         to = moves.at(random).second.get_position();
         board_->move_from_to(from, to);
         increase_turn();
+        if(terminal_state() != 'n')
+        {
+            if(terminal_state() == 'w')
+            {
+                std::cout << "Player 1 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 'l')
+            {
+                std::cout << "Player 2 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 't')
+            {
+                std::cout << "It's a tie!" << std::endl;
+                start();
+            }
+        }
     }
     else if(level_ == 'e'){
         int best = 0;
