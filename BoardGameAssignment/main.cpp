@@ -58,7 +58,6 @@ int main()
             cin >> from_square;
             cin  >> to_square;
 
-
             Position from = game->get_int_from_input(from_square);
             Position to = game->get_int_from_input(to_square);
 
