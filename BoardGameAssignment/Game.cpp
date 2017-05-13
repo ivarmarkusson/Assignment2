@@ -3,6 +3,7 @@
 #include <string>
 #include <stdlib.h>
 #include <ctime>
+#include "Piece.h"
 
 Game::Game(int rows, int cols)
 {
@@ -113,6 +114,18 @@ void Game::legal()
     }
 }
 
+/*
+Game Game::successor_state(std::pair<Piece, Piece> action){
+    Game successor(board_->get_rows(), board_->get_columns());
+
+    successor.turn_ = turn_;
+    successor.board_ = board_;
+    successor.level_ = level_;
+    successor.timeline_ = timeline_;
+
+    return successor;
+}*/
+
 void Game::AI_move()
 {
     Position from;
@@ -130,4 +143,29 @@ void Game::AI_move()
         board_->move_from_to(from, to);
         increase_turn();
     }
+    else if(level_ == 'e'){
+        int best = 0;
+        int index = 0;
+        std::vector<std::pair<Piece,Piece>> moves = legal_moves();
+        for(size_t i = 0; i < moves.size(); i++){
+            board_->move_from_to(moves[i].first.get_position(), moves[i].second.get_position());
+            int eval = evaluate();
+            if(eval > best){
+                best = eval;
+                index = i;
+            }
+            board_ = timeline_.back();
+        }
+        board_->move_from_to(moves[index].first.get_position(), moves[index].second.get_position());
+        increase_turn();
+    }
 }
+
+
+
+
+
+
+
+
+

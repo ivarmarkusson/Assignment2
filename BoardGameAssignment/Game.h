@@ -25,6 +25,7 @@ class Game
         void set_level(char l) {level_ = l;}
         char get_level() {return level_;}
         void AI_move();
+        //Game successor_state(std::pair<Piece, Piece> action);
 
     protected:
         Board *board_;

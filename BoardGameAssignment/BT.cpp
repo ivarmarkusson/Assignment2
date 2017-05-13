@@ -44,7 +44,7 @@ char BT::terminal_state(){
         if(board_->get_at(i,0).get_owner() == 1){
             return 'l'; // Player 2 wins
         }
-        if(board_->get_at(i,board_->get_rows()).get_owner() == 0){
+        if(board_->get_at(i,board_->get_rows() -1).get_owner() == 0){
             return 'w'; // Player 1 wins
         }
     }
@@ -60,10 +60,10 @@ int BT::evaluate(){
     int count;
 
     if(player_turn == 0){
-        count = board_->count_pieces_for_owner(0);
+        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
     }
     else{
-        count = board_->count_pieces_for_owner(0);
+        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
     }
 
     return count;
