@@ -13,6 +13,7 @@ class Game
         virtual void start() = 0;
         virtual int evaluate() = 0;
         virtual char terminal_state() = 0;
+
         void legal();
         void display() const;
         void move(std::string from, std::string to );
