@@ -11,6 +11,8 @@ class Game
         virtual ~Game();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves() = 0;
         virtual void start() = 0;
+        virtual int evaluate() = 0;
+        virtual char terminal_state() = 0;
         void legal();
         void display() const;
         void move(std::string from, std::string to );
@@ -19,10 +21,15 @@ class Game
         Position get_int_from_input(std::string input);
         Piece get_at_board(int x, int y);
         int get_turns() {return turn_;};
+        void set_level(char l) {level_ = l;}
+        char get_level() {return level_;}
+
+
     protected:
         Board *board_;
         int turn_;
         std::vector<Board*> timeline_;
+        char level_;
 
     private:
         void increase_turn() {turn_++;};

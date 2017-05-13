@@ -56,6 +56,14 @@ MBT::~MBT()
 
 }
 
+int MBT::evaluate(){
+    return 0;
+}
+
+char MBT::terminal_state(){
+    return 'n';
+}
+
 std::vector<std::pair<Piece,Piece>> MBT::legal_moves()
 {
     int player_turn = turn_ % 2;

@@ -33,6 +33,60 @@ FaH::~FaH()
     //dtor
 }
 
+int FaH::evaluate(){
+    int player = turn_ % 2;
+    char terminal_status = terminal_state();
+
+
+
+    if(player == 0){
+        switch(terminal_status){
+            case('w'):{
+                return 100;
+            }
+            case('l'):{
+                return 0;
+            }
+            case('t'):{
+                return 50;
+            }
+        }
+
+    }
+    else{
+        switch(terminal_status){
+            case('w'):{
+                return 0;
+            }
+            case('l'):{
+                return 100;
+            }
+            case('t'):{
+                return 50;
+            }
+        }
+    }
+    return 0;
+}
+
+char FaH::terminal_state(){
+    for(int i = 0; i < board_->get_rows(); i++){
+        for(int j = 0; j < board_->get_columns(); j++){
+            Piece obj = board_->get_at(i,j);
+            if( (i == board_->get_rows() -1) && obj.get_symbol() == 'H' ){
+                return 'w'; //fox won
+            }
+        }
+    }
+    if(legal_moves().empty() && (turn_ % 2) == 0){
+        return 'l'; //hound won
+    }
+    if(legal_moves().empty()){
+        return 't'; // tie
+    }
+    return 'n'; // not terminal
+}
+
 std::vector<std::pair<Piece,Piece>> FaH::legal_moves()
 {
     int player_turn = turn_ % 2;

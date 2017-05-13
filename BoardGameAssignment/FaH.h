@@ -9,7 +9,9 @@ class FaH : public Game
         FaH();
         virtual ~FaH();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves();
+        virtual int evaluate();
         virtual void start();
+        virtual char terminal_state();
     protected:
     private:
 };

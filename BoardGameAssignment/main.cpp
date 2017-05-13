@@ -101,19 +101,19 @@ int main()
             cin >> input;
             if(input == "random")
             {
-
+                game->set_level('r');
             }
             else if (input == "easy")
             {
-
+                game->set_level('e');
             }
             else if (input == "medium")
             {
-
+                game->set_level('m');
             }
             else if (input == "hard")
             {
-
+                game->set_level('h');
             }
         }
         else if (input == "debug")

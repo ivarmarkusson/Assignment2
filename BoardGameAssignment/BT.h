@@ -11,6 +11,8 @@ class BT : public Game
         virtual ~BT();
         virtual std::vector<std::pair<Piece,Piece>> legal_moves();
         virtual void start();
+        virtual int evaluate();
+        virtual char terminal_state();
     protected:
     private:
 };

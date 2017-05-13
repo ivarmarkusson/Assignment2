@@ -39,6 +39,13 @@ BT::~BT()
     //dtor
 }
 
+char BT::terminal_state(){
+    return 'n';
+}
+
+int BT::evaluate(){
+    return 0;
+}
 
 vector<pair<Piece,Piece>> BT::legal_moves()
 {
