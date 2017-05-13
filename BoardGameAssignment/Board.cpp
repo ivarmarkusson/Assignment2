@@ -61,7 +61,8 @@ Board::~Board()
 void Board::move_from_to(Position from, Position to)
 {
     board_[to.x_][to.y_] = board_[from.x_][from.y_];
-    board_[from.x_][from.y_] = Piece();
+    board_[to.x_][to.y_].set_position(to.x_, to.y_);
+    board_[from.x_][from.y_] = Piece(from.x_, from.y_);
 }
 
 bool Board::contains_at(Position pos)

@@ -13,6 +13,7 @@ class Piece
 {
     public:
         Piece();
+        Piece(int x, int y);
         Piece(int player,char sym,Position pos, std::vector<std::pair<int,int>> moves);
         virtual ~Piece();
         char get_symbol() const {return symbol_;}

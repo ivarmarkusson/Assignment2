@@ -8,6 +8,14 @@ Piece::Piece()
     owner_ = -1;
 }
 
+Piece::Piece(int x, int y)
+{
+    symbol_ = '.';
+    owner_ = -1;
+    position_.x_ = x;
+    position_.y_ = y;
+}
+
 Piece::Piece(int player,char sym,Position pos, vector<std::pair<int,int> > moves )
 {
     posible_moves_ = moves;

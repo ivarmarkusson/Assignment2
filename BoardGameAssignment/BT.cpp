@@ -84,5 +84,3 @@ void BT::start()
     BT *temp = new BT(board_->get_rows(), board_->get_columns());
     *this = *temp;
 }
-
-
