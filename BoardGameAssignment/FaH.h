@@ -12,6 +12,7 @@ class FaH : public Game
         virtual int evaluate();
         virtual void start();
         virtual char terminal_state();
+
     protected:
     private:
 };

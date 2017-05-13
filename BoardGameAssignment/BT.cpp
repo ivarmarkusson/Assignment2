@@ -40,11 +40,72 @@ BT::~BT()
 }
 
 char BT::terminal_state(){
-    return 'n';
+    for(int i = 0; i < board_->get_columns(); i++){
+        if(board_->get_at(i,0).get_owner() == 1){
+            return 'l'; // Player 2 wins
+        }
+        if(board_->get_at(i,board_->get_rows()).get_owner() == 0){
+            return 'w'; // Player 1 wins
+        }
+    }
+    if(legal_moves().empty()){
+        return 't'; // tie
+    }
+
+    return 'n'; // not a terminal state
 }
 
 int BT::evaluate(){
-    return 0;
+    int player_turn = turn_ % 2;
+    int count;
+
+    if(player_turn == 0){
+        count = board_->count_pieces_for_owner(0);
+    }
+    else{
+        count = board_->count_pieces_for_owner(0);
+    }
+
+    return count;
+
+    /*
+    char terminal_status = terminal_state();
+
+    if(player_turn == 0){
+        switch(terminal_status){
+            case('w'):{
+                return 100;
+            }
+            case('l'):{
+                return 0;
+            }
+            case('t'):{
+                return 50;
+            }
+        }
+
+        int maxPlayer1 = 0;
+        int maxPlayer2 = 0;
+
+        for(int i = 0; i < board_->get_rows(); i++){
+            for(int j = 0; j < board_->get_columns(); j++){
+                if()
+            }
+        }
+    }
+    else{
+        switch(terminal_status){
+            case('w'):{
+                return 0;
+            }
+            case('l'):{
+                return 100;
+            }
+            case('t'):{
+                return 50;
+            }
+        }
+    }*/
 }
 
 vector<pair<Piece,Piece>> BT::legal_moves()
