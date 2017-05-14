@@ -74,20 +74,11 @@ bool Board::contains_at(Position pos)
     return false;
 }
 
-/**
-*  Places piece at a specific place on the board
-*/
-
 void Board::place_piece(Piece piece)
 {
     Position pos = piece.get_position();
     board_[pos.x_][pos.y_] = piece;
 }
-
-/**
- * Displays the board to the console
- * ONLY use if you want to display on the console!!
- */
 
 void Board::display_board()
 {

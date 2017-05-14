@@ -1,0 +1,163 @@
+\hypertarget{class_board}{}\section{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_board_a3ac4a0188fb538b543c0297b4d4b80f9}{Board} (int row, int col=0)
+\begin{DoxyCompactList}\small\item\em Constructor for \hyperlink{class_board}{Board}. \end{DoxyCompactList}\item 
+\hyperlink{class_board_ac77f209904bb37545295c17649a9dc17}{Board} (const \hyperlink{class_board}{Board} \&b)
+\begin{DoxyCompactList}\small\item\em copy constructor for \hyperlink{class_board}{Board} \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a80a65ba64e71692a98908462b83c7225}{move\+\_\+from\+\_\+to} (\hyperlink{struct_position}{Position} from, \hyperlink{struct_position}{Position} to)
+\begin{DoxyCompactList}\small\item\em moves a piece on the board \end{DoxyCompactList}\item 
+void \hyperlink{class_board_a84451a19dbe1741f08404a41b4394f76}{place\+\_\+piece} (\hyperlink{class_piece}{Piece} piece)
+\begin{DoxyCompactList}\small\item\em Places a piece on the board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a5937bd1d9eee4d11feeb6acc39228983}\label{class_board_a5937bd1d9eee4d11feeb6acc39228983}} 
+void \hyperlink{class_board_a5937bd1d9eee4d11feeb6acc39228983}{display\+\_\+board} ()
+\begin{DoxyCompactList}\small\item\em Displays the board to the console. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_ab44c78159172094685eb9a75ca2cf91e}\label{class_board_ab44c78159172094685eb9a75ca2cf91e}} 
+int {\bfseries get\+\_\+rows} ()
+\item 
+\mbox{\Hypertarget{class_board_a4cdc6a15ce71cf8281e7b79d758e2f6d}\label{class_board_a4cdc6a15ce71cf8281e7b79d758e2f6d}} 
+int {\bfseries get\+\_\+columns} ()
+\item 
+bool \hyperlink{class_board_a727409cb7ffce590a8d0bf2fc2524285}{contains\+\_\+at} (\hyperlink{struct_position}{Position} pos)
+\begin{DoxyCompactList}\small\item\em Check if the board contains a \hyperlink{class_piece}{Piece} owned by a player. \end{DoxyCompactList}\item 
+\hyperlink{class_piece}{Piece} \hyperlink{class_board_a3d8816bd69742e918dff1cc1ee0fc845}{get\+\_\+at} (int x, int y)
+\begin{DoxyCompactList}\small\item\em returns a \hyperlink{class_piece}{Piece} at the position that is asked for \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_board_a57a4317cebaae4f6879856262cf9caae}\label{class_board_a57a4317cebaae4f6879856262cf9caae}} 
+\hyperlink{class_board}{Board} \& {\bfseries operator=} (const \hyperlink{class_board}{Board} \&rhs)
+\item 
+int \hyperlink{class_board_a810df7b42404d5c0b5c48d7516307d8d}{count\+\_\+pieces\+\_\+for\+\_\+owner} (int owner)
+\begin{DoxyCompactList}\small\item\em Counts the pieces on the board for an owner. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_a3ac4a0188fb538b543c0297b4d4b80f9}\label{class_board_a3ac4a0188fb538b543c0297b4d4b80f9}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for \hyperlink{class_board}{Board}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row,initializes} & rows \\
+\hline
+{\em col,initializes} & columns, if left empty it will be set to the same as rows \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_ac77f209904bb37545295c17649a9dc17}\label{class_board_ac77f209904bb37545295c17649a9dc17}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\subsubsection{\texorpdfstring{Board()}{Board()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}\item[{const \hyperlink{class_board}{Board} \&}]{b }\end{DoxyParamCaption})}
+
+
+
+copy constructor for \hyperlink{class_board}{Board} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & the board to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_a727409cb7ffce590a8d0bf2fc2524285}\label{class_board_a727409cb7ffce590a8d0bf2fc2524285}} 
+\index{Board@{Board}!contains\+\_\+at@{contains\+\_\+at}}
+\index{contains\+\_\+at@{contains\+\_\+at}!Board@{Board}}
+\subsubsection{\texorpdfstring{contains\+\_\+at()}{contains\_at()}}
+{\footnotesize\ttfamily bool Board\+::contains\+\_\+at (\begin{DoxyParamCaption}\item[{\hyperlink{struct_position}{Position}}]{pos }\end{DoxyParamCaption})}
+
+
+
+Check if the board contains a \hyperlink{class_piece}{Piece} owned by a player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_position}{Position}} & pos, position of the piece \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if a player owns a piece on the given position otherwise returns false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a810df7b42404d5c0b5c48d7516307d8d}\label{class_board_a810df7b42404d5c0b5c48d7516307d8d}} 
+\index{Board@{Board}!count\+\_\+pieces\+\_\+for\+\_\+owner@{count\+\_\+pieces\+\_\+for\+\_\+owner}}
+\index{count\+\_\+pieces\+\_\+for\+\_\+owner@{count\+\_\+pieces\+\_\+for\+\_\+owner}!Board@{Board}}
+\subsubsection{\texorpdfstring{count\+\_\+pieces\+\_\+for\+\_\+owner()}{count\_pieces\_for\_owner()}}
+{\footnotesize\ttfamily int Board\+::count\+\_\+pieces\+\_\+for\+\_\+owner (\begin{DoxyParamCaption}\item[{int}]{owner }\end{DoxyParamCaption})}
+
+
+
+Counts the pieces on the board for an owner. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & owner, the owner of which pieces should be counted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the number of pieces the owner has on the board. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a3d8816bd69742e918dff1cc1ee0fc845}\label{class_board_a3d8816bd69742e918dff1cc1ee0fc845}} 
+\index{Board@{Board}!get\+\_\+at@{get\+\_\+at}}
+\index{get\+\_\+at@{get\+\_\+at}!Board@{Board}}
+\subsubsection{\texorpdfstring{get\+\_\+at()}{get\_at()}}
+{\footnotesize\ttfamily \hyperlink{class_piece}{Piece} Board\+::get\+\_\+at (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+returns a \hyperlink{class_piece}{Piece} at the position that is asked for 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & coord. \\
+\hline
+{\em y} & coord. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The piece on the position asked for 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a80a65ba64e71692a98908462b83c7225}\label{class_board_a80a65ba64e71692a98908462b83c7225}} 
+\index{Board@{Board}!move\+\_\+from\+\_\+to@{move\+\_\+from\+\_\+to}}
+\index{move\+\_\+from\+\_\+to@{move\+\_\+from\+\_\+to}!Board@{Board}}
+\subsubsection{\texorpdfstring{move\+\_\+from\+\_\+to()}{move\_from\_to()}}
+{\footnotesize\ttfamily void Board\+::move\+\_\+from\+\_\+to (\begin{DoxyParamCaption}\item[{\hyperlink{struct_position}{Position}}]{from,  }\item[{\hyperlink{struct_position}{Position}}]{to }\end{DoxyParamCaption})}
+
+
+
+moves a piece on the board 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_position}{Position}} & from, start position \\
+\hline
+{\em \hyperlink{struct_position}{Position}} & to, end position \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_board_a84451a19dbe1741f08404a41b4394f76}\label{class_board_a84451a19dbe1741f08404a41b4394f76}} 
+\index{Board@{Board}!place\+\_\+piece@{place\+\_\+piece}}
+\index{place\+\_\+piece@{place\+\_\+piece}!Board@{Board}}
+\subsubsection{\texorpdfstring{place\+\_\+piece()}{place\_piece()}}
+{\footnotesize\ttfamily void Board\+::place\+\_\+piece (\begin{DoxyParamCaption}\item[{\hyperlink{class_piece}{Piece}}]{piece }\end{DoxyParamCaption})}
+
+
+
+Places a piece on the board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_piece}{Piece}} & piece, the piece to be placed \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Board.\+h\item 
+Board.\+cpp\end{DoxyCompactItemize}

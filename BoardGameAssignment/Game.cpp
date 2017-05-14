@@ -164,24 +164,35 @@ void Game::AI_move()
         int index = 0;
         std::vector<std::pair<Piece,Piece>> moves = legal_moves();
         for(size_t i = 0; i < moves.size(); i++){
+            record_time();
             board_->move_from_to(moves[i].first.get_position(), moves[i].second.get_position());
             int eval = evaluate();
             if(eval > best){
                 best = eval;
                 index = i;
             }
-            board_ = timeline_.back();
+            retract();
+            increase_turn();
         }
         board_->move_from_to(moves[index].first.get_position(), moves[index].second.get_position());
         increase_turn();
+        if(terminal_state() != 'n')
+        {
+            if(terminal_state() == 'w')
+            {
+                std::cout << "Player 1 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 'l')
+            {
+                std::cout << "Player 2 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 't')
+            {
+                std::cout << "It's a tie!" << std::endl;
+                start();
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-

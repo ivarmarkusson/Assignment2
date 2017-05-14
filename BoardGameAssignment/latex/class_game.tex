@@ -1,0 +1,80 @@
+\hypertarget{class_game}{}\section{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+Inheritance diagram for Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_ac8c9003009977a0ecf0c35e0002f0f9e}\label{class_game_ac8c9003009977a0ecf0c35e0002f0f9e}} 
+{\bfseries Game} (int rows, int cols=0)
+\item 
+\mbox{\Hypertarget{class_game_a205fc7dd195bc398138cc188aad8bc38}\label{class_game_a205fc7dd195bc398138cc188aad8bc38}} 
+virtual std\+::vector$<$ std\+::pair$<$ \hyperlink{class_piece}{Piece}, \hyperlink{class_piece}{Piece} $>$ $>$ {\bfseries legal\+\_\+moves} ()=0
+\item 
+\mbox{\Hypertarget{class_game_add988158041df85337995e36f06756aa}\label{class_game_add988158041df85337995e36f06756aa}} 
+virtual void {\bfseries start} ()=0
+\item 
+\mbox{\Hypertarget{class_game_a068b2b3012154457f362c90a80f46253}\label{class_game_a068b2b3012154457f362c90a80f46253}} 
+virtual int {\bfseries evaluate} ()=0
+\item 
+\mbox{\Hypertarget{class_game_ac7cbe36964272dd7dcd7e68fafaf24cc}\label{class_game_ac7cbe36964272dd7dcd7e68fafaf24cc}} 
+virtual char {\bfseries terminal\+\_\+state} ()=0
+\item 
+\mbox{\Hypertarget{class_game_a69f0e2636aa7e85836418aea42792527}\label{class_game_a69f0e2636aa7e85836418aea42792527}} 
+void {\bfseries legal} ()
+\item 
+\mbox{\Hypertarget{class_game_ae98bb6563800f3265d7da2445804ea97}\label{class_game_ae98bb6563800f3265d7da2445804ea97}} 
+void {\bfseries display} () const
+\item 
+\mbox{\Hypertarget{class_game_a00150c33b3469c2fb95653b2f3be36b6}\label{class_game_a00150c33b3469c2fb95653b2f3be36b6}} 
+void {\bfseries move} (std\+::string from, std\+::string to)
+\item 
+\mbox{\Hypertarget{class_game_a9be0655102af94f1a37a7eaec1be36fc}\label{class_game_a9be0655102af94f1a37a7eaec1be36fc}} 
+void {\bfseries retract} ()
+\item 
+\mbox{\Hypertarget{class_game_accc03cc11af1ef5614a265d2e9ed4841}\label{class_game_accc03cc11af1ef5614a265d2e9ed4841}} 
+void {\bfseries record\+\_\+time} ()
+\item 
+\mbox{\Hypertarget{class_game_a2a71f9781d47c4b7c62005bb14f6bfa3}\label{class_game_a2a71f9781d47c4b7c62005bb14f6bfa3}} 
+\hyperlink{struct_position}{Position} {\bfseries get\+\_\+int\+\_\+from\+\_\+input} (std\+::string input)
+\item 
+\mbox{\Hypertarget{class_game_a255e5bb1512854fd8df8cef51fab49d8}\label{class_game_a255e5bb1512854fd8df8cef51fab49d8}} 
+\hyperlink{class_piece}{Piece} {\bfseries get\+\_\+at\+\_\+board} (int x, int y)
+\item 
+\mbox{\Hypertarget{class_game_a65250bbb867f1eb8067dab620a1dfd58}\label{class_game_a65250bbb867f1eb8067dab620a1dfd58}} 
+int {\bfseries get\+\_\+turns} ()
+\item 
+\mbox{\Hypertarget{class_game_aed72a88415e4978d27c72e6929264e0d}\label{class_game_aed72a88415e4978d27c72e6929264e0d}} 
+void {\bfseries set\+\_\+level} (char l)
+\item 
+\mbox{\Hypertarget{class_game_a0643486d59cd27c1089d97ecffec1c79}\label{class_game_a0643486d59cd27c1089d97ecffec1c79}} 
+char {\bfseries get\+\_\+level} ()
+\item 
+\mbox{\Hypertarget{class_game_ac495c211545773a11948a3b3ac52bb18}\label{class_game_ac495c211545773a11948a3b3ac52bb18}} 
+void {\bfseries A\+I\+\_\+move} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_ade066636bda0bcc3501deb4981d9f400}\label{class_game_ade066636bda0bcc3501deb4981d9f400}} 
+\hyperlink{class_board}{Board} $\ast$ {\bfseries board\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_abc9f7b7f1ced3ddb136dbd25bebd4e2a}\label{class_game_abc9f7b7f1ced3ddb136dbd25bebd4e2a}} 
+int {\bfseries turn\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_aacf1e01c0a9777117e730c8105fc339c}\label{class_game_aacf1e01c0a9777117e730c8105fc339c}} 
+std\+::vector$<$ \hyperlink{class_board}{Board} $\ast$ $>$ {\bfseries timeline\+\_\+}
+\item 
+\mbox{\Hypertarget{class_game_a9fcfb58bda101e497f8845f01ba56582}\label{class_game_a9fcfb58bda101e497f8845f01ba56582}} 
+char {\bfseries level\+\_\+}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\item 
+Game.\+cpp\end{DoxyCompactItemize}
