@@ -153,7 +153,7 @@ void Game::AI_move()
         increase_turn();
         check_for_terminal_state();
     }
-    else if(level_ == 'm')
+    else if(level_ == 'm' ||level_ == 'h')
     {
         std::pair<Piece,Piece> move = minmax(3);
         board_->move_from_to(move.first.get_position(), move.second.get_position());

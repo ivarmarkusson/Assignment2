@@ -4,7 +4,6 @@
 #include "Piece.h"
 #include <ostream>
 #include <string>
-#include "Player.h"
 
 class Board
 {

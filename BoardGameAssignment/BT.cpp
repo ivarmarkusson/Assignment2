@@ -66,55 +66,119 @@ int BT::evaluate()
     int player_turn = turn_ % 2;
     int count;
 
-    if(player_turn == 0)
+    if(level_ != 'h')
     {
-        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+        if(player_turn == 0)
+        {
+            count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+        }
+        else
+        {
+            count = board_->count_pieces_for_owner(1) - board_->count_pieces_for_owner(0);
+        }
+
+        return count;
     }
     else
     {
-        count = board_->count_pieces_for_owner(1) - board_->count_pieces_for_owner(0);
-    }
+        char terminal_status = terminal_state();
+        if(player_turn == 0)
+        {
+            count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+        }
+        else
+        {
+            count = board_->count_pieces_for_owner(1) - board_->count_pieces_for_owner(0);
+        }
 
-    return count;
-
-    /*
-    char terminal_status = terminal_state();
-
-    if(player_turn == 0){
-        switch(terminal_status){
-            case('w'):{
+        if(player_turn == 0)
+        {
+            switch(terminal_status)
+            {
+            case('w'):
+            {
                 return 100;
             }
-            case('l'):{
+            case('l'):
+            {
                 return 0;
             }
-            case('t'):{
+            case('t'):
+            {
                 return 50;
             }
-        }
-
-        int maxPlayer1 = 0;
-        int maxPlayer2 = 0;
-
-        for(int i = 0; i < board_->get_rows(); i++){
-            for(int j = 0; j < board_->get_columns(); j++){
-                if()
             }
+
+            int most_advanced_piece = 0;
+            int most_advanced_enemy_piece = 10;
+
+            for(int i = 0; i < board_->get_rows(); i++)
+            {
+                for(int j = 0; j < board_->get_columns(); j++)
+                {
+                    Piece piece = board_->get_at(i,j);
+                    if(piece.get_owner() == player_turn && piece.get_position().y_ > most_advanced_piece)
+                    {
+                        most_advanced_piece = piece.get_position().y_;
+                    }
+                    if(piece.get_owner() == 1 && most_advanced_enemy_piece > piece.get_position().y_)
+                    {
+                        most_advanced_enemy_piece = piece.get_position().y_;
+                    }
+                }
+            }
+
+            int count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+
+            int convert = abs(most_advanced_enemy_piece - board_->get_rows() -1);
+
+            return count + most_advanced_piece - convert;
         }
-    }
-    else{
-        switch(terminal_status){
-            case('w'):{
+        else
+        {
+            switch(terminal_status)
+            {
+            case('w'):
+            {
                 return 0;
             }
-            case('l'):{
+            case('l'):
+            {
                 return 100;
             }
-            case('t'):{
+            case('t'):
+            {
                 return 50;
             }
+            }
+
+            int most_advanced_piece = 10;
+            int most_advanced_enemy_piece = 0;
+
+            for(int i = 0; i < board_->get_rows(); i++)
+            {
+                for(int j = 0; j < board_->get_columns(); j++)
+                {
+                    Piece piece = board_->get_at(i,j);
+                    if(piece.get_owner() == player_turn && piece.get_position().y_ < most_advanced_piece)
+                    {
+                        most_advanced_piece = piece.get_position().y_;
+                    }
+                    if(piece.get_owner() == 0 && most_advanced_enemy_piece < piece.get_position().y_)
+                    {
+                        most_advanced_enemy_piece = piece.get_position().y_;
+                    }
+                }
+            }
+
+            int count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+
+            int convert = abs(most_advanced_piece - board_->get_rows() -1);
+
+            return count + convert - most_advanced_enemy_piece;
         }
-    }*/
+
+    }
 }
 
 vector<pair<Piece,Piece>> BT::legal_moves()

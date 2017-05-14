@@ -35,47 +35,60 @@ FaH::~FaH()
 
 int FaH::evaluate()
 {
-    int player = turn_ % 2;
-    char terminal_status = terminal_state();
+    int player_turn = turn_ % 2;
+    int count = 0;
 
-    if(player == 0)
+    if(level_ != 'h')
     {
-        switch(terminal_status)
+        if(player_turn == 0)
         {
-        case('w'):
+            count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+        }
+        else
         {
-            return 100;
+            count = board_->count_pieces_for_owner(1) - board_->count_pieces_for_owner(0);
         }
-        case('l'):
-        {
-            return 0;
-        }
-        case('t'):
-        {
-            return 50;
-        }
-        }
-
     }
     else
     {
-        switch(terminal_status)
+        if(player_turn == 0)
         {
-        case('w'):
-        {
-            return 0;
+            for(int i = 0; i < board_->get_rows(); i++)
+            {
+                for(int j = 0; j < board_->get_columns(); j++)
+                {
+                    Piece obj = board_->get_at(i,j);
+                    if( (obj.get_symbol() == 'F' ))
+                    {
+                        count = j;
+                    }
+                    if( (j == board_->get_rows() -1) && obj.get_symbol() == 'F' )
+                    {
+                        count = 100; //fox won
+                    }
+                }
+            }
         }
-        case('l'):
+        else
         {
-            return 100;
-        }
-        case('t'):
-        {
-            return 50;
-        }
+            for(int i = 0; i < board_->get_rows(); i++)
+            {
+                for(int j = 0; j < board_->get_columns(); j++)
+                {
+                    Piece obj = board_->get_at(i,j);
+                    if (j > 0 && obj.get_symbol() == 'H')
+                    {
+                        Piece fox = board_->get_at(i,j-1);
+                        if( (fox.get_symbol() == 'F' ))
+                        {
+                            count = i;
+                        }
+                    }
+                }
+            }
         }
     }
-    return 0;
+    return count;
 }
 
 char FaH::terminal_state()
@@ -85,7 +98,7 @@ char FaH::terminal_state()
         for(int j = 0; j < board_->get_columns(); j++)
         {
             Piece obj = board_->get_at(i,j);
-            if( (i == board_->get_rows() -1) && obj.get_symbol() == 'F' )
+            if( (j == board_->get_rows() -1) && obj.get_symbol() == 'F' )
             {
                 return 'w'; //fox won
             }

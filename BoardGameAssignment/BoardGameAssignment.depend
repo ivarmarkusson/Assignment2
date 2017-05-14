@@ -50,11 +50,10 @@
 1494437127 c:\users\gylfi\desktop\assignment2\boardgameassignment\include\game.h
 	"Board.h"
 
-1494788268 c:\users\gylfi\desktop\assignment2\boardgameassignment\board.h
+1494795911 c:\users\gylfi\desktop\assignment2\boardgameassignment\board.h
 	"Piece.h"
 	<ostream>
 	<string>
-	"Player.h"
 
 1494788268 c:\users\gylfi\desktop\assignment2\boardgameassignment\piece.h
 	<vector>
@@ -76,7 +75,7 @@
 	<vector>
 	<stdlib.h>
 
-1494788268 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
+1494794343 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\game.cpp
 	"Game.h"
 	<iostream>
 	<string>
@@ -100,7 +99,7 @@
 	"Game.h"
 	<vector>
 
-1494788268 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.cpp
+1494795339 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\fah.cpp
 	"FaH.h"
 	<vector>
 	<iostream>
