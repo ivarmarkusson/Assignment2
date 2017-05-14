@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <ctime>
 #include "Piece.h"
+#include <vector>
 
 Game::Game(int rows, int cols)
 {
@@ -163,18 +164,102 @@ void Game::AI_move()
         int best = 0;
         int index = 0;
         std::vector<std::pair<Piece,Piece>> moves = legal_moves();
+
         for(size_t i = 0; i < moves.size(); i++){
+            record_time();
             board_->move_from_to(moves[i].first.get_position(), moves[i].second.get_position());
             int eval = evaluate();
             if(eval > best){
                 best = eval;
                 index = i;
             }
-            board_ = timeline_.back();
+            increase_turn();
+            retract();
         }
+
         board_->move_from_to(moves[index].first.get_position(), moves[index].second.get_position());
+
         increase_turn();
+
+        if(terminal_state() != 'n')
+        {
+            if(terminal_state() == 'w')
+            {
+                std::cout << "Player 1 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 'l')
+            {
+                std::cout << "Player 2 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 't')
+            {
+                std::cout << "It's a tie!" << std::endl;
+                start();
+            }
+        }
     }
+    else if(level_ == 'm'){
+        std::pair<Piece,Piece> move = minmax(3);
+        board_->move_from_to(move.first.get_position(), move.second.get_position());
+        increase_turn();
+
+        if(terminal_state() != 'n')
+        {
+            if(terminal_state() == 'w')
+            {
+                std::cout << "Player 1 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 'l')
+            {
+                std::cout << "Player 2 wins!" << std::endl;
+                start();
+            }
+            if(terminal_state() == 't')
+            {
+                std::cout << "It's a tie!" << std::endl;
+                start();
+            }
+        }
+    }
+
+}
+
+std::pair<Piece,Piece> Game::minmax(int depth){
+    std::pair<Piece,Piece> move;
+    max_move(depth, move);
+    return move;
+}
+
+int Game::max_move(int depth, std::pair<Piece,Piece> &move){
+    if(terminal_state() != 'n' || depth == 0)
+    {
+        return evaluate();
+    }
+
+    std::vector<std::pair<Piece,Piece>> moves = legal_moves();
+    int value = -100;
+    for(size_t i = 0 ; i < moves.size(); i++)
+    {
+        record_time();
+        std::pair<Piece,Piece> next_move = moves[i];
+        board_->move_from_to(next_move.first.get_position(), next_move.second.get_position());
+        increase_turn();
+
+        std::pair<Piece,Piece> opponents_best_move;
+        int results = -max_move(depth -1, opponents_best_move);
+
+        if (results > value)
+        {
+            value = results;
+            move = next_move;
+        }
+
+        retract();
+    }
+    return value;
 }
 
 

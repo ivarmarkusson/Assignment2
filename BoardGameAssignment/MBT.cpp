@@ -73,7 +73,17 @@ char MBT::terminal_state(){
 }
 
 int MBT::evaluate(){
-    return 0;
+    int player_turn = turn_ % 2;
+    int count;
+
+    if(player_turn == 0){
+        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+    }
+    else{
+        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+    }
+
+    return count;
 }
 
 std::vector<std::pair<Piece,Piece>> MBT::legal_moves()

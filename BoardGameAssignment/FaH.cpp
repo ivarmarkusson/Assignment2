@@ -71,7 +71,7 @@ char FaH::terminal_state(){
     for(int i = 0; i < board_->get_rows(); i++){
         for(int j = 0; j < board_->get_columns(); j++){
             Piece obj = board_->get_at(i,j);
-            if( (i == board_->get_rows() -1) && obj.get_symbol() == 'H' ){
+            if( (i == board_->get_rows() -1) && obj.get_symbol() == 'F' ){
                 return 'w'; //fox won
             }
         }
