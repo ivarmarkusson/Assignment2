@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['contains_5fat',['contains_at',['../class_board.html#a727409cb7ffce590a8d0bf2fc2524285',1,'Board']]],
-  ['count_5fpieces_5ffor_5fowner',['count_pieces_for_owner',['../class_board.html#a810df7b42404d5c0b5c48d7516307d8d',1,'Board']]]
+  ['board',['Board',['../class_board.html#a3ac4a0188fb538b543c0297b4d4b80f9',1,'Board::Board(int row, int col=0)'],['../class_board.html#ac77f209904bb37545295c17649a9dc17',1,'Board::Board(const Board &amp;b)']]]
 ];

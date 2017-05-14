@@ -3,7 +3,6 @@
 #include <string>
 #include <cstdlib>
 
-
 Board::Board(int row, int col) : rows_(row), columns_(col)
 {
     if(columns_ == 0)

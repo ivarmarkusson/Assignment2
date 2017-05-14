@@ -11,6 +11,8 @@ int main()
 {
     Game *game;
     string input;
+    int rows = 8;
+    int cols = 0;
     bool debug = false;
     while(input != "quit")
     {
@@ -25,21 +27,21 @@ int main()
             cin >> choice;
             switch(choice)
             {
-                case(1):
-                {
-                    game = new BT(8);
-                    break;
-                }
-                case(2):
-                {
-                    game = new FaH;
-                    break;
-                }
-                case(3):
-                {
-                    game = new MBT(8);
-                    break;
-                }
+            case(1):
+            {
+                game = new BT(rows, cols);
+                break;
+            }
+            case(2):
+            {
+                game = new FaH;
+                break;
+            }
+            case(3):
+            {
+                game = new MBT(rows, cols);
+                break;
+            }
             }
         }
         else if(input == "start")
@@ -66,14 +68,17 @@ int main()
             bool validMove = false;
 
             vector<pair<Piece,Piece>> legal_moves = game->legal_moves();
-            for(size_t i = 0; i < legal_moves.size(); i++){
-                if(piece_from == legal_moves[i].first && piece_to == legal_moves[i].second){
+            for(size_t i = 0; i < legal_moves.size(); i++)
+            {
+                if(piece_from == legal_moves[i].first && piece_to == legal_moves[i].second)
+                {
                     game->move(from_square, to_square);
                     validMove = true;
                 }
             }
 
-            if(!validMove){
+            if(!validMove)
+            {
                 cout << "Illegal move" << endl;
             }
         }
@@ -116,6 +121,11 @@ int main()
         else if (input == "debug")
         {
             debug = true;
+        }
+        else if (input == "size")
+        {
+            cin >> rows;
+            cin >> cols;
         }
         if (debug)
         {

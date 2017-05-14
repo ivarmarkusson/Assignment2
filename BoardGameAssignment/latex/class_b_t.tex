@@ -12,19 +12,83 @@ Inheritance diagram for BT\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_b_t_ace122849e5dcf81df2748b44bec34f97}\label{class_b_t_ace122849e5dcf81df2748b44bec34f97}} 
 {\bfseries BT} (int rows, int cols=0)
 \item 
-\mbox{\Hypertarget{class_b_t_a4d3ad59ecb429b37c983986cc7802b17}\label{class_b_t_a4d3ad59ecb429b37c983986cc7802b17}} 
-virtual std\+::vector$<$ std\+::pair$<$ \hyperlink{class_piece}{Piece}, \hyperlink{class_piece}{Piece} $>$ $>$ {\bfseries legal\+\_\+moves} ()
-\item 
-\mbox{\Hypertarget{class_b_t_acb87d577e00a5fa66ddb653c697e3ad4}\label{class_b_t_acb87d577e00a5fa66ddb653c697e3ad4}} 
-virtual void {\bfseries start} ()
-\item 
-\mbox{\Hypertarget{class_b_t_a330840afc9271716265fb65eb037d351}\label{class_b_t_a330840afc9271716265fb65eb037d351}} 
-virtual int {\bfseries evaluate} ()
-\item 
-\mbox{\Hypertarget{class_b_t_a5b09c0eb2d583ae2141aeefe18545e5c}\label{class_b_t_a5b09c0eb2d583ae2141aeefe18545e5c}} 
-virtual char {\bfseries terminal\+\_\+state} ()
-\end{DoxyCompactItemize}
+virtual std\+::vector$<$ std\+::pair$<$ \hyperlink{class_piece}{Piece}, \hyperlink{class_piece}{Piece} $>$ $>$ \hyperlink{class_b_t_a4d3ad59ecb429b37c983986cc7802b17}{legal\+\_\+moves} ()
+\begin{DoxyCompactList}\small\item\em abstract function to check if a move is legal \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_b_t_acb87d577e00a5fa66ddb653c697e3ad4}{start} ()
+\begin{DoxyCompactList}\small\item\em starts a new instance of the game being played \end{DoxyCompactList}\item 
+virtual int \hyperlink{class_b_t_a330840afc9271716265fb65eb037d351}{evaluate} ()
+\begin{DoxyCompactList}\small\item\em evaluates the current state of the board \end{DoxyCompactList}\item 
+virtual char \hyperlink{class_b_t_a5b09c0eb2d583ae2141aeefe18545e5c}{terminal\+\_\+state} ()
+\begin{DoxyCompactList}\small\item\em checks to see if the game has hit a terminal state \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_b_t_a330840afc9271716265fb65eb037d351}\label{class_b_t_a330840afc9271716265fb65eb037d351}} 
+\index{BT@{BT}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!BT@{BT}}
+\subsubsection{\texorpdfstring{evaluate()}{evaluate()}}
+{\footnotesize\ttfamily int B\+T\+::evaluate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+evaluates the current state of the board 
+
+\begin{DoxyReturn}{Returns}
+the state evaluation as an integer 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_a068b2b3012154457f362c90a80f46253}{Game}.
+
+\mbox{\Hypertarget{class_b_t_a4d3ad59ecb429b37c983986cc7802b17}\label{class_b_t_a4d3ad59ecb429b37c983986cc7802b17}} 
+\index{BT@{BT}!legal\+\_\+moves@{legal\+\_\+moves}}
+\index{legal\+\_\+moves@{legal\+\_\+moves}!BT@{BT}}
+\subsubsection{\texorpdfstring{legal\+\_\+moves()}{legal\_moves()}}
+{\footnotesize\ttfamily vector$<$ pair$<$ \hyperlink{class_piece}{Piece}, \hyperlink{class_piece}{Piece} $>$ $>$ B\+T\+::legal\+\_\+moves (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+abstract function to check if a move is legal 
+
+\begin{DoxyReturn}{Returns}
+a vector of legal moves for the player whos turn it is 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_a205fc7dd195bc398138cc188aad8bc38}{Game}.
+
+\mbox{\Hypertarget{class_b_t_acb87d577e00a5fa66ddb653c697e3ad4}\label{class_b_t_acb87d577e00a5fa66ddb653c697e3ad4}} 
+\index{BT@{BT}!start@{start}}
+\index{start@{start}!BT@{BT}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void B\+T\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+starts a new instance of the game being played 
+
+
+
+Implements \hyperlink{class_game_add988158041df85337995e36f06756aa}{Game}.
+
+\mbox{\Hypertarget{class_b_t_a5b09c0eb2d583ae2141aeefe18545e5c}\label{class_b_t_a5b09c0eb2d583ae2141aeefe18545e5c}} 
+\index{BT@{BT}!terminal\+\_\+state@{terminal\+\_\+state}}
+\index{terminal\+\_\+state@{terminal\+\_\+state}!BT@{BT}}
+\subsubsection{\texorpdfstring{terminal\+\_\+state()}{terminal\_state()}}
+{\footnotesize\ttfamily char B\+T\+::terminal\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+checks to see if the game has hit a terminal state 
+
+\begin{DoxyReturn}{Returns}
+a character value to represent the state of the game 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_game_ac7cbe36964272dd7dcd7e68fafaf24cc}{Game}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
