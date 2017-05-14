@@ -63,8 +63,6 @@ void Game::move(std::string from, std::string to)
     }
 }
 
-
-
 Position Game::get_int_from_input(std::string input)
 {
     Position pos;
@@ -129,24 +127,7 @@ void Game::AI_move()
         to = moves.at(random).second.get_position();
         board_->move_from_to(from, to);
         increase_turn();
-        if(terminal_state() != 'n')
-        {
-            if(terminal_state() == 'w')
-            {
-                std::cout << "Player 1 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 'l')
-            {
-                std::cout << "Player 2 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 't')
-            {
-                std::cout << "It's a tie!" << std::endl;
-                start();
-            }
-        }
+        check_for_terminal_state();
     }
     else if(level_ == 'e')
     {
@@ -169,52 +150,15 @@ void Game::AI_move()
         }
 
         board_->move_from_to(moves[index].first.get_position(), moves[index].second.get_position());
-
         increase_turn();
-
-        if(terminal_state() != 'n')
-        {
-            if(terminal_state() == 'w')
-            {
-                std::cout << "Player 1 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 'l')
-            {
-                std::cout << "Player 2 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 't')
-            {
-                std::cout << "It's a tie!" << std::endl;
-                start();
-            }
-        }
+        check_for_terminal_state();
     }
     else if(level_ == 'm')
     {
         std::pair<Piece,Piece> move = minmax(3);
         board_->move_from_to(move.first.get_position(), move.second.get_position());
         increase_turn();
-
-        if(terminal_state() != 'n')
-        {
-            if(terminal_state() == 'w')
-            {
-                std::cout << "Player 1 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 'l')
-            {
-                std::cout << "Player 2 wins!" << std::endl;
-                start();
-            }
-            if(terminal_state() == 't')
-            {
-                std::cout << "It's a tie!" << std::endl;
-                start();
-            }
-        }
+        check_for_terminal_state();
     }
 }
 
@@ -253,4 +197,26 @@ int Game::max_move(int depth, std::pair<Piece,Piece> &move)
         retract();
     }
     return value;
+}
+
+void Game::check_for_terminal_state()
+{
+    if(terminal_state() != 'n')
+    {
+        if(terminal_state() == 'w')
+        {
+            std::cout << "Player 1 wins!" << std::endl;
+            start();
+        }
+        if(terminal_state() == 'l')
+        {
+            std::cout << "Player 2 wins!" << std::endl;
+            start();
+        }
+        if(terminal_state() == 't')
+        {
+            std::cout << "It's a tie!" << std::endl;
+            start();
+        }
+    }
 }

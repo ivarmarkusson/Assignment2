@@ -72,7 +72,7 @@ int BT::evaluate()
     }
     else
     {
-        count = board_->count_pieces_for_owner(0) - board_->count_pieces_for_owner(1);
+        count = board_->count_pieces_for_owner(1) - board_->count_pieces_for_owner(0);
     }
 
     return count;

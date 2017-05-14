@@ -26,7 +26,7 @@
 1494436804 c:\users\gylfi\desktop\skóli\4.önn\hlutbundin forritun í c++\boardgameassignment\include\game.h
 	"Board.h"
 
-1494788437 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\main.cpp
+1494789042 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\main.cpp
 	<iostream>
 	"BT.h"
 	"MBT.h"
@@ -67,10 +67,10 @@
 	"Game.h"
 	<vector>
 
-1494788268 c:\users\gylfi\desktop\assignment2\boardgameassignment\game.h
+1494789541 c:\users\gylfi\desktop\assignment2\boardgameassignment\game.h
 	"Board.h"
 
-1494788268 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.cpp
+1494789234 source:c:\users\gylfi\desktop\assignment2\boardgameassignment\bt.cpp
 	"BT.h"
 	<iostream>
 	<vector>

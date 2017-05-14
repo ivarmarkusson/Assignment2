@@ -13,6 +13,7 @@ int main()
     string input;
     int rows = 8;
     int cols = 0;
+    int eval = 0;
     bool debug = false;
     while(input != "quit")
     {
@@ -92,7 +93,8 @@ int main()
         }
         else if (input == "evaluate")
         {
-
+            eval = game->evaluate();
+            cout << eval << endl;
         }
         else if(input == "go")
         {

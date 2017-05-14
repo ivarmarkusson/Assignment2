@@ -135,6 +135,11 @@ private:
      */
     int max_move(int depth, std::pair<Piece,Piece> &move);
 
+    /** \brief check to see if a terminal state has been reached
+     *
+     */
+
+    void check_for_terminal_state();
 
 };
 
